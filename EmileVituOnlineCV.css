@@ -1,9 +1,6 @@
 /* The CSS styles for EmileVituOnlineCV */
-
-.intro{
-	text-align: center;
-}
-
-h1{
-	text-align: left;
+body{
+	background: black;
+	color: chartreuse;
+	/*font-size: xx; will have to do that regarding the titles... */
 }
