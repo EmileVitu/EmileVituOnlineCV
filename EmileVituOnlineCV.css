@@ -1,16 +1,22 @@
 /* The CSS styles for EmileVituOnlineCV */
+
+	/* First the body features for the whole page */
 body{
 	/*background: black;
 	color: white;*/
 	font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
 	font-weight: 400;
+	margin-left: 10%;
+	margin-right: 10%;
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
+/* This I will probably have to delete */
 h1{
 	font-family: "papyrus";
 }
 
+	/* Now the styles for the general grid */
 .wrap0{
 	background: #eee;
 	display: grid;
@@ -23,11 +29,27 @@ h1{
 	border: #333 1px solid;
 }
 
+	/* Now the styles for the different classes of the grid elements */
+.title-left{
+	grid-column: 1/4;
+	text-align: left;
+}
 
+.title-right{
+	grid-column: 1/4;
+	text-align: right;
+}
 
+/* This I will have to delete as well once I have layed out the page */
 img{
 	height: 200px;
 }
+
+
+
+
+
+
 
 
 /*.wrap1{
