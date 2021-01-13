@@ -11,24 +11,39 @@ h1{
 	font-family: "papyrus";
 }
 
+/*.wrap0{
+	display: grid;
+}*/
+
+img{
+	height: 200px;
+	/*width: 200px;*/
+}
+
 .wrap1{
 	display: grid;
-	grid-template-columns: 1fr 1fr 3fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 2em;
-	grid-auto-rows: minmax(400px, auto);
+	grid-auto-rows: 400px;
 }
 
 .wrap2{
 	display: grid;
-	grid-template-columns: 3fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 2em;
-	grid-auto-rows: minmax(400px, auto);
+	grid-auto-rows: 400px;
 }
 
 .row-left{
 	text-align: left;
+	justify-self: start;
 }
 
 .row-right{
-	text-align: right;
+	justify-self: center;
+	align-self: center;
+}
+
+.wrapContact{
+	text-align: center;
 }
