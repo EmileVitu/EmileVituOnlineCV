@@ -1,7 +1,7 @@
 /* The CSS styles for EmileVituOnlineCV */
 body{
-	background: black;
-	color: white;
+	/*background: black;
+	color: white;*/
 	font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
 	font-weight: 400;
 	/*font-size: xx; will have to do that regarding the titles... */
@@ -11,9 +11,17 @@ h1{
 	font-family: "papyrus";
 }
 
-/*.wrap0{
+.wrap0{
+	background: #eee;
 	display: grid;
-}*/
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-row-gap: 2em;
+	grid-column-gap: 2em;
+}
+
+.wrap0 > div{
+	border: #333 1px solid;
+}
 
 
 
