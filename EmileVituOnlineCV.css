@@ -11,10 +11,30 @@ body{
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
-/* This I will probably have to delete */
+/* Now the font styles */
 h1{
-	font-family: "papyrus";
+	font-family: "Arial";
+	font-size: 200px;
 }
+h2{
+	font-family: "Avantgarde";
+	font-size: 100px;
+}
+h3{
+	font-family: "Avantgarde";
+	font-size: 50px;
+}
+/*
+h4{
+	font-family: "Avantgarde";
+	font-size: 20px;
+}
+*/
+p{
+	font-family: "Avantgarde";
+	font-size: 30px;
+}
+
 
 	/* Now the styles for the general grid */
 .wrap0{
