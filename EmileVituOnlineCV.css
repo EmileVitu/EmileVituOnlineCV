@@ -11,34 +11,40 @@ body{
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
-/* Now the font styles */
+	/* Now the font styles */
+/* For the main title of the page */
 h1{
 	font-family: "Arial";
 	font-size: 200px;
 }
+/* For titles */
 h2{
-	font-family: "Avantgarde";
+	font-family: "Arial";
 	font-size: 100px;
 }
+/* For subtitles */
 h3{
-	font-family: "Avantgarde";
+	font-family: "Arial";
 	font-size: 50px;
 }
-/*
-h4{
-	font-family: "Avantgarde";
-	font-size: 20px;
-}
-*/
+/* For plain text */
 p{
-	font-family: "Avantgarde";
+	font-family: "Arial";
+	font-size: 25px;
+}
+ul{
+	font-family: "Arial";
 	font-size: 30px;
+}
+li{
+	font-family: "Arial";
+	font-size: 25px;
 }
 
 
 	/* Now the styles for the general grid */
 .wrap0{
-	background: #eee;
+	/* background: #eee; */
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 2em;
@@ -49,6 +55,7 @@ p{
 	border: #333 1px solid;
 }
 
+
 	/* Now the styles for the different classes of the grid elements */
 .title-left{
 	grid-column: 1/4;
@@ -56,8 +63,8 @@ p{
 }
 
 .title-right{
-	grid-column: 1/4;
-	text-align: right;
+	grid-column: 3/4;
+	text-align: left;
 }
 
 .content-left{
@@ -68,32 +75,69 @@ p{
 	height: 500px;
 }
 
-	/* Now the styles for the two nested grids */
-.content-right-nested{
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column: 1/3;
-	height: 500px;
-	align-items: center;
-	justify-items: center;
+.myStory{
+	grid-column: 2/4;
 }
 
-.subnest{
-	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column: 1/3;
-	align-self: center;
-	justify-self: center;
+	/* Here is the contact chapter with it's own nest */
+.contact{
+	grid-column: 1/2;
+}
+.contact-nest{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.logo1{
+	grid-column: 1/2;
+}
+.logo1 > a >img{
+	height: 80px;
+}
+.logo2{
+	grid-column: 3/4;
+}
+.logo2 > a >img{
+	height: 80px;
+}
+.logo3{
+	grid-column: 5/6;
+}
+.logo3 > a >img{
+	height: 80px;
 }
 
+	/* Now the styles for the two other nested grids and the subnest grid*/
 .content-left-nested{
 	display:grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-column: 2/4;
 	height: 500px;
 	align-items: center;
 	justify-items: start;
+	border: #333 1px solid;
 }
+.content-right-nested{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column: 1/3;
+	height: 500px;
+	align-items: center;
+	justify-items: center;
+	border: #333 1px solid;
+}
+.subnest{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column: 2/4;
+	align-self: end;
+	justify-self: center;
+	border: #333 1px solid;
+}
+
+
+
+
+
 
 /* !!!!!!! Maybe I'll have to put the row heights in window fractions for the responsiveness with smaller devices !!!!!!! */
 /* This I will have to delete as well once I have layed out the page */
