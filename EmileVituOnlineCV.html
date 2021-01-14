@@ -25,6 +25,7 @@
 <body>
 		<!-- Here begins the body -->
 
+
 	<!-- Here begins the main grid -->
 	<div class="wrap0">
 	
@@ -61,13 +62,14 @@
 				<li>...to check on the internet...</li>
 			</ul>
 		</div>
+		
 		<div class="content-left-nested">
-			<div class="zoomA">
+			<div class="zoomA0">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/ECJ3NNW8LQ9Z">
 					<img src="data/Module_1.png"></img>
 				</a>
 			</div>
-			<div class="zoomA">
+			<div class="zoomA0">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/98S9WH26EQ6L">
 					<img src="data/Module_2.png"></img>
 				</a>
@@ -81,33 +83,26 @@
 
 				<!-- The sixth chapter (content-right) -->		
 		<div class="content-right-nested">
-			<div>
-			</div>
-			<div class="zoomA">
+			<div class="zoomA1">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/VE72UNPBNZBN">
 					<img src="data/Module_3.png"></img>
 				</a>
 			</div>
-			<div class="zoomA">
+			<div class="zoomA2">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/5YJV2T8KPXNA">
 					<img src="data/Module_4.png"></img>
 				</a>
 			</div>
-			<div>
-			</div>
 			
 			<div class="subnest">
-				<div>
-				</div>
 				<div class="zoomA">
 					<a href="https://www.coursera.org/account/accomplishments/certificate/YFRVC6UB7RP3">
 						<img src="data/Module_5.png"></img>
 					</a>
 				</div>
-				<div>
-				</div>
 			</div>
 		</div>
+
 		<div class="content-right">
 			<ul>
 				<li>Meteor.js,</li> 
@@ -332,8 +327,24 @@
 		<div class="contact">
 <!-- Missing copy help links -->
 			<div class="contact-details">
-				<p>Telephone: 083 197 0731</p>
-				<p>email: vitu.emile@yahoo.fr</p>
+				<div class="line">
+					<ul><li>Telephone: </li></ul>
+				</div>
+				<div>
+					<p id="p1">083 197 0731</p>
+				</div>
+				<div class="right-line">
+					<button onclick="copyToClipboard('#p1')">Copy</button>
+				</div>
+				<div class="line">
+					<ul><li>email: </li></ul>
+				</div>
+				<div>
+					<p id="p2">vitu.emile@yahoo.fr</p>
+				</div>
+				<div class="right-line">
+					<button onclick="copyToClipboard('#p2')">Copy</button>
+				</div>
 			</div>
 		</div>
 				<!-- The twenty-fourth chapter (content-left) -->
@@ -356,12 +367,15 @@
 				</div>
 			</div>
 		</div>
+				<!-- The twenty-fifth chapter (content-left) -->
+		<div class="blank">
+		</div>
 		<!-- End of the wrap0 grid -->
 	</div>
 
 		<!-- End of body -->
 </body>
-
+		<!-- End of the html -->
 </html>
 
 

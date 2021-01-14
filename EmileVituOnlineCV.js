@@ -9,6 +9,14 @@
 
 //We probably will be needing some buttons as well to go back up to the top of the page
 
+	/* The copy function */
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
 
 
 
