@@ -1,5 +1,7 @@
 /* The CSS styles for EmileVituOnlineCV */
-
+html{
+	  	cursor: url('data/cursor.gif'), auto;
+}
 	/* First the body features for the whole page */
 body{
 	/*background: black;
@@ -27,10 +29,22 @@ h3{
 	font-family: "Arial";
 	font-size: 50px;
 }
+h4{
+	font-family: "Arial";
+	font-size: 40px;
+	padding-top: 10px;
+}
+h5{
+	font-family: "Arial";
+	font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 /* For plain text */
 p{
 	font-family: "Arial";
 	font-size: 25px;
+	
 }
 ul{
 	list-style-image: url('data/bullet-point.jpg');
@@ -60,6 +74,11 @@ li{
 }
 
 
+	/* For the intro paragraph for the first paragraph */
+.intro{
+	padding: 10px;
+}
+
 	/* Now the styles for the different classes of the grid elements */
 .title-left{
 	grid-column: 1/4;
@@ -76,6 +95,7 @@ li{
 }
 .content-left > img{
 	text-align: right;
+	height: 350px;
 }
 
 .content-right{
@@ -173,6 +193,7 @@ img{
 		/* First the zoom tool for general images */
 * {
   box-sizing: border-box;
+
 }
 .zoomA {
   transition: transform .2s;
@@ -214,9 +235,9 @@ img{
   transition: transform .2s;
 }
 .zoomB:hover {
-  -ms-transform: scale(4); /* IE 9 */
-  -webkit-transform: scale(4); /* Safari 3-8 */
-  transform: scale(4); 
+  -ms-transform: scale(2.3); /* IE 9 */
+  -webkit-transform: scale(2.3); /* Safari 3-8 */
+  transform: scale(2.3); 
   transform-origin: 10% 50%;
 }
 /* Must check if it is still ok even on smaller device, and play with transform-origin if needed */
@@ -236,9 +257,6 @@ button{
 	padding-left: 20px;
 	padding-top: 4px;
 }
-
-
-
 
 
 
