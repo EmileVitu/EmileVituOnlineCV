@@ -70,6 +70,9 @@ li{
 .content-left{
 	height: 500px;
 }
+.content-left > img{
+	text-align: right;
+}
 
 .content-right{
 	height: 500px;
@@ -145,9 +148,30 @@ img{
 	height: 200px;
 }
 
-
-
-
+	/* Now to put in the zoom while mouse hover */
+		/* First the zoom tool for general images */
+* {
+  box-sizing: border-box;
+}
+.zoomA {
+  transition: transform .2s;
+}
+.zoomA:hover {
+  -ms-transform: scale(3); /* IE 9 */
+  -webkit-transform: scale(3); /* Safari 3-8 */
+  transform: scale(3); 
+}
+		/* Now a special one for the images in content-left, to avoid going out of the window */
+.zoomB {
+  transition: transform .2s;
+}
+.zoomB:hover {
+  -ms-transform: scale(4); /* IE 9 */
+  -webkit-transform: scale(4); /* Safari 3-8 */
+  transform: scale(4); 
+  transform-origin: 10% 90%;
+}
+/* Must check if it is still ok even on smaller device, and play with transform-origin if needed */
 
 
 
