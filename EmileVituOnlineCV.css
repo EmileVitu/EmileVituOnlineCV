@@ -1,59 +1,93 @@
 /* The CSS styles for EmileVituOnlineCV */
+/* Change this color! */
+
+
 html{
-	  	cursor: url('data/cursor.gif'), auto;
+	/*cursor: url('data/cursor.gif'), auto; */
+		/* This one is for the fading effect */
+	box-sizing: border-box;
+
 }
+/* Must still style this button (maybe likes the ones in the bottom) */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: #555;
+}
+
+	/* This is to import my special font */
+@font-face {
+	font-family: helvetNeueBlod;
+	src: url(data/HelveticaNeueBold.ttf);
+}
+
 	/* First the body features for the whole page */
 body{
 	/*background: black;
 	color: white;*/
-	font-family: "Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif";
+	font-family: "helvetNeueBlod";
 	font-weight: 400;
 	margin-left: 10%;
 	margin-right: 10%;
+	margin-top: 5%;
+	position: relative;
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
 	/* Now the font styles */
 /* For the main title of the page */
 h1{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 200px;
 }
 /* For titles */
 h2{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 100px;
 }
 /* For subtitles */
 h3{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 50px;
 }
 h4{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 40px;
 	padding-top: 10px;
 }
 h5{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 30px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 /* For plain text */
 p{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 25px;
 	
 }
 ul{
 	list-style-image: url('data/bullet-point.jpg');
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 30px;
 	margin: 10px;
 }
 li{
-	font-family: "Arial";
+	font-family: "helvetNeueBlod";
 	font-size: 25px;
 	padding-top: 15px;
 	padding-left: 10px;
@@ -62,7 +96,7 @@ li{
 
 	/* Now the styles for the general grid */
 .wrap0{
-	/background: #eee;
+	/*background: black;*/
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 2em;
@@ -70,7 +104,7 @@ li{
 }
 
 .wrap0 > div{
-	border: #333 1px solid;
+	border: gray 1px solid;
 }
 
 
@@ -125,7 +159,7 @@ li{
 	grid-column: 1/2;
 }
 .contact-details > div{
-	border: #333 1px solid;
+	border: gray 1px solid;
 }
 .line{
 	grid-column: 1/3;
@@ -157,7 +191,7 @@ li{
 	height: 500px;
 	align-items: center;
 	justify-items: start;
-	border: #333 1px solid;
+	border: gray 1px solid;
 }
 .content-right-nested{
 	display:grid;
@@ -166,7 +200,7 @@ li{
 	height: 500px;
 	align-items: center;
 	justify-items: center;
-	border: #333 1px solid;
+	border: gray 1px solid;
 }
 .subnest{
 	display:grid;
@@ -174,7 +208,7 @@ li{
 	grid-column: 2/4;
 	align-self: end;
 	justify-self: center;
-	border: #333 1px solid;
+	border: gray 1px solid;
 	padding-bottom: 20px;
 }
 
@@ -191,10 +225,7 @@ img{
 
 	/* Now to put in the zoom while mouse hover */
 		/* First the zoom tool for general images */
-* {
-  box-sizing: border-box;
 
-}
 .zoomA {
   transition: transform .2s;
   grid-column: 2/3;
@@ -248,7 +279,7 @@ button{
   width: 80px;
   border-radius: 15px;
   font-size: 18px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'helvetNeueBlod';
   height: 30px;
   cursor: pointer;
   background-color: white;
@@ -257,6 +288,88 @@ button{
 	padding-left: 20px;
 	padding-top: 4px;
 }
+
+	/* Now the scroll to top button */
+#scrollToTopBtn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+}
+
+.scrollToTopBtn {
+  /* same general styles as before */
+  
+  /* place it at the bottom-right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  /* keep it at the top of everything else */
+  z-index: 100;
+
+  /* hide with opacity */
+  opacity: 0;
+
+  /* also add a translate effect */
+  transform: translateY(100px);
+
+  /* and a transition */
+  transition: all .5s ease
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+	/* This is for the fading text at the beginning and the end of the page */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* These are general stylings shared for both gradients */
+/*.wrap0:after, .wrap0:before {
+  content: '';
+  position: absolute;
+  left: 0.5em;*/
+  /* 100% is the full width 
+  Then subtract 1em for the padding
+  Then subtract 17px for the scroll bar */
+ /* width: calc(100% - 1em - 17px);
+  height: 3em;
+}*/
+/* Top Gradient 
+.wrap0:before {
+  top: 0.5em;
+  border-top-left-radius: 0.5em;
+  background-image: linear-gradient(to bottom, white, transparent);
+}*/
+/* Bottom Gradient 
+.wrap0:after {
+  bottom: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  background-image: linear-gradient(to top, white, transparent);
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

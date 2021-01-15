@@ -13,9 +13,7 @@
 		<!-- Then to add my own files -->
 			<!-- Adding my CSS stylesheet -->
 	<link rel="stylesheet" href="EmileVituOnlineCV.css">
-			<!-- Adding my JavaScript script -->
-	<script src="EmileVituOnlineCV.js"></script>
-		<!-- Then the code to make it responsive -->
+		<!-- The code to make it responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- End of the head -->
 </head>
@@ -25,10 +23,10 @@
 <body>
 		<!-- Here begins the body -->
 
-
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>	
 	<!-- Here begins the main grid -->
 	<div class="wrap0">
-	
+
 				<!-- The first Chapter (left) -->
 		<div class="title-left">
 			<h1>Emile Vitu</h1>
@@ -373,8 +371,53 @@
 		<!-- End of the wrap0 grid -->
 	</div>
 
+
+
+
+	<script>
+		
+	/* The copy function */
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+
+
+
+
+
+console.log('Everything seems to be working for now');
+	</script>
+
 		<!-- End of body -->
 </body>
+
+
 		<!-- End of the html -->
 </html>
 
