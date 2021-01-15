@@ -41,12 +41,8 @@ body{
 	color: white;*/
 	font-family: "helvetNeueBlod";
 	font-weight: 400;
-	margin-left: 10%;
-	margin-right: 10%;
 	margin-top: 2%;
 	position: relative;
-	margin: 0;
-}
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
@@ -99,12 +95,13 @@ li{
 
 	/* Now the styles for the general grid */
 .wrap0{
-	/*background: black;*/
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 2em;
 	grid-column-gap: 2em;
-	z-index: 1;
+	background-image: linear-gradient(to top, transparent 60px, #fff 60px, #fff 0);
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .wrap0 > div{
@@ -149,20 +146,25 @@ li{
 	height: 50px;
 }
 
-	/* Here is the contact chapter with it's own nest */
-.contact{
-	grid-column: 1/2;
+/* Now for the footer with the contact details */
+footer {
 	position: sticky;
 	position: -webkit-sticky;
 	bottom: 0;
+	width: 100%;
 	z-index: -1;
 	background-color: dodgerblue;
 	color: white;
 	text-shadow: 2px 2px black;
-	padding: 5px 0;
 }
 
 
+.contact{
+	grid-column: 1/2;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+	/* Now the contact's own nest */
 .contact-nest{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
