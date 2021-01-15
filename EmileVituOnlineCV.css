@@ -45,6 +45,8 @@ body{
 	margin-right: 10%;
 	margin-top: 2%;
 	position: relative;
+	margin: 0;
+}
 	/*font-size: xx; will have to do that regarding the titles... */
 }
 
@@ -102,6 +104,7 @@ li{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 2em;
 	grid-column-gap: 2em;
+	z-index: 1;
 }
 
 .wrap0 > div{
@@ -149,7 +152,17 @@ li{
 	/* Here is the contact chapter with it's own nest */
 .contact{
 	grid-column: 1/2;
+	position: sticky;
+	position: -webkit-sticky;
+	bottom: 0;
+	z-index: -1;
+	background-color: dodgerblue;
+	color: white;
+	text-shadow: 2px 2px black;
+	padding: 5px 0;
 }
+
+
 .contact-nest{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
