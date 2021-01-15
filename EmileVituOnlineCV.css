@@ -6,6 +6,7 @@ html{
 	/*cursor: url('data/cursor.gif'), auto; */
 		/* This one is for the fading effect */
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 
 }
 /* Must still style this button (maybe likes the ones in the bottom) */
@@ -42,7 +43,7 @@ body{
 	font-weight: 400;
 	margin-left: 10%;
 	margin-right: 10%;
-	margin-top: 5%;
+	margin-top: 2%;
 	position: relative;
 	/*font-size: xx; will have to do that regarding the titles... */
 }
@@ -326,6 +327,27 @@ button{
   opacity: 1;
   transform: translateY(0)
 }
+
+		/* Now to style the scroll progress bar in the 'header' div */
+	/* First the background bar (black one) */
+.progressContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #000;
+}
+	/* Then we can add the progress bar on top */
+.progress{
+  height: 8px;
+  background: #999;
+  width: 0;
+  transition: width 0.5s;
+}
+
+
+
 
 	/* This is for the fading text at the beginning and the end of the page */
 *, *:before, *:after {
