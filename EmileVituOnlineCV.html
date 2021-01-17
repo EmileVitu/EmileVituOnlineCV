@@ -35,7 +35,7 @@
 	<div class="wrap0">
 
 				<!-- The first Chapter (left) -->
-		<div class="title-left">
+		<div class="intro-div">
 			<h1>Emile Vitu</h1>
 			<h3>Junior FullStack Web Developer</h3>
 			<h4><i>Responsive Website Development and Design</i></h4>
@@ -71,12 +71,12 @@
 		<div class="content-left-nested">
 			<div class="zoomA0">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/ECJ3NNW8LQ9Z">
-					<img src="data/Module_1.png"></img>
+					<img class="inline-photo show-on-scroll" src="data/Module_1.png"></img>
 				</a>
 			</div>
 			<div class="zoomA0">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/98S9WH26EQ6L">
-					<img src="data/Module_2.png"></img>
+					<img class="inline-photo show-on-scroll" src="data/Module_2.png"></img>
 				</a>
 			</div>
 		</div>
@@ -90,19 +90,19 @@
 		<div class="content-right-nested">
 			<div class="zoomA1">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/VE72UNPBNZBN">
-					<img src="data/Module_3.png"></img>
+					<img class="inline-photo show-on-scroll" src="data/Module_3.png"></img>
 				</a>
 			</div>
 			<div class="zoomA2">
 				<a href="https://www.coursera.org/account/accomplishments/certificate/5YJV2T8KPXNA">
-					<img src="data/Module_4.png"></img>
+					<img class="inline-photo show-on-scroll" src="data/Module_4.png"></img>
 				</a>
 			</div>
 			
 			<div class="subnest">
 				<div class="zoomA">
 					<a href="https://www.coursera.org/account/accomplishments/certificate/YFRVC6UB7RP3">
-						<img src="data/Module_5.png"></img>
+						<img class="inline-photo show-on-scroll" src="data/Module_5.png"></img>
 					</a>
 				</div>
 			</div>
@@ -136,7 +136,7 @@
 		
 				<!-- The ninth chapter (content-left) -->
 		<div class="content-left">
-			<img src="data/infinite_scroll.png" class="zoomB"></img>
+			<img class="inline-photo show-on-scroll zoomB" src="data/infinite_scroll.png"></img>
 		</div>
 		<div>
 			<ul>The infinite scroll:
@@ -150,7 +150,7 @@
 		
 				<!-- The tenth chapter (content-left) -->
 		<div class="content-left">
-			<img src="data/routing_1.png" class="zoomB"></img>
+			<img src="data/routing_1.png" class="inline-photo show-on-scroll zoomB"></img>
 		</div>
 		<div>
 			<ul>The routing:
@@ -165,7 +165,7 @@
 		
 				<!-- The eleventh chapter (content-left) -->
 		<div class="content-left">
-			<img src="data/user_author.png" class="zoomB"></img>
+			<img src="data/user_author.png" class="inline-photo show-on-scroll zoomB"></img>
 		</div>
 		<div>			
 			<ul>Database security:
@@ -179,7 +179,7 @@
 		
 				<!-- The twelvth chapter (content-left) -->
 		<div class="content-left">
-			<img src="data/search_tool.png" class="zoomB"></img>				
+			<img src="data/search_tool.png" class="inline-photo show-on-scroll zoomB""></img>				
 		</div>
 		<div>			
 			<ul>Reactive search tool:
@@ -344,7 +344,7 @@
 					<p id="p1">083 197 0731</p>
 				</div>
 				<div class="right-line">
-					<button onclick="copyToClipboard('#p1')">Copy</button>
+					<button onclick="copyToClipboard('#p1')" id="">Copy</button>
 				</div>
 				<div class="line">
 					<ul><li>email: </li></ul>
@@ -352,8 +352,8 @@
 				<div>
 					<p id="p2">vitu.emile@yahoo.fr</p>
 				</div>
-				<div class="right-line">
-					<button onclick="copyToClipboard('#p2')">Copy</button>
+				<div class="right-line" name="onTop">
+					<button onclick="copyToClipboard('#p2')" name="onTop">Copy</button>
 				</div>
 			</div>
 		</div>
@@ -385,6 +385,59 @@
 
 	<script>
 
+		/* Here starts the code for the scroll animation */
+	/* First we set up our requestAnimationFrame method applied to a variable */
+	/* We also have a fallback function that waits one 60 of a second before it callsback */
+var scroll = window.requestAnimationFrame || function(callback){ 
+	window.setTimeout(callback, 1000/60)
+};
+	/* Next we set a variable for all the elements with the 'show-on-scroll' class */
+var elementsToShow = document.querySelectorAll('.show-on-scroll');
+	/* It will return all the elements we are looking for and return them in an array */
+
+function loop() {
+	elementsToShow.forEach(function (element) {
+	/* So we can now loop through this array and check if they are in the viewport */
+		if (isElementInViewport(element)) {
+			element.classList.add('is-visible');
+		}
+	/* If they are we can add to them the class 'is-visible' */
+		else {
+			element.classList.remove('is-visible');
+		}
+	});
+	scroll(loop);
+}
+
+		/* Now we call the loop for the first time */
+loop();
+
+	/* Helper function from: http://stackoverflow.com/a/7557433/274826 */
+function isElementInViewport(el) {
+	/*  */
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+
+
+
+
+
+
+
+
 	/* The scroll progress bar function */
 function updateProgress(num1, num2){
   var percent = Math.ceil( num1 / num2 * 100 ) + '%';
@@ -406,6 +459,18 @@ function copyToClipboard(element) {
   $temp.remove();
 }
 
+/* Need to make appear the buttons and links in the footer */
+/*var mybutton2 = document.getElementById("myBtn2");
+window.onscroll = function() {scrollFunction2()};
+
+function scrollFunction2() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton2.style.display = "block";
+  } else {
+    mybutton2.style.display = "none";
+  }
+}
+*/
 //Get the button
 var mybutton = document.getElementById("myBtn");
 

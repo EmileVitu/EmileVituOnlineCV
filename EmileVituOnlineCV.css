@@ -29,6 +29,7 @@ html{
   background-color: #555;
 }
 
+
 	/* This is to import my special font */
 @font-face {
 	font-family: helvetNeueBlod;
@@ -115,6 +116,12 @@ li{
 }
 
 	/* Now the styles for the different classes of the grid elements */
+.intro-div{
+	grid-column: 1/4;
+	text-align: left;
+	height: 100vh;
+}
+
 .title-left{
 	grid-column: 1/4;
 	text-align: left;
@@ -305,6 +312,12 @@ button{
 	padding-top: 4px;
 }
 
+div[name="onTop"]{
+    color:blue;
+	z-index: 9999;
+	position: sticky;
+}
+
 	/* Now the scroll to top button */
 #scrollToTopBtn {
   background-color: black;
@@ -392,13 +405,23 @@ button{
   background-image: linear-gradient(to top, white, transparent);
 }*/
 
-
-
-
-
-
-
-
+		/* Here are the styles for the images that appear with the scrolling */
+	/* For the photos (layout like a real photo) */
+.inline-photo {
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-10deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  width: 100%;
+  will-change: transform, opacity;
+  padding-left: 2em;
+}
+	/* Now once the images are visible */
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(0deg);
+}
 
 
 
