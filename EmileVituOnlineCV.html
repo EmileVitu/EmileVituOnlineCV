@@ -441,33 +441,34 @@
 
 <script>
 
+/* Here starts the JavaScript code for EmileVituOnlineCV */
+
+
 		/* Here starts the code for the scroll animation */
 	/* First we set up our requestAnimationFrame method applied to a variable */
-	/* We also have a fallback function that waits one 60 of a second before it callsback */
+	/* We also have a fallback function that waits one 60th of a second before it callsback */
 var scroll = window.requestAnimationFrame || function(callback){ 
 	window.setTimeout(callback, 1000/60)
 };
 	/* Next we set a variable for all the elements with the 'show-on-scroll' class */
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 	/* It will return all the elements we are looking for and return them in an array */
-
+	/* Now we can have a function that loops in that array */
 function loop() {
 	elementsToShow.forEach(function (element) {
-	/* So we can now loop through this array and check if they are in the viewport */
+	/* With the loop we check if they are in the viewport */
 		if (isElementInViewport(element)) {
 			element.classList.add('is-visible');
 		}
-	/* If they are we can add to them the class 'is-visible' */
+	/* If they are we can add to them the class 'is-visible' and if ot we remove them */
 		else {
 			element.classList.remove('is-visible');
 		}
 	});
 	scroll(loop);
 }
-
-		/* Now we call the loop for the first time */
+	/* Now we call the loop for the first time */
 loop();
-
 	/* Helper function from: http://stackoverflow.com/a/7557433/274826 */
 function isElementInViewport(el) {
 	/*  */
@@ -487,19 +488,21 @@ function isElementInViewport(el) {
   );
 }
 
-	/* The scroll progress bar function */
+
+		/* The scroll progress bar function */
 function updateProgress(num1, num2){
   var percent = Math.ceil( num1 / num2 * 100 ) + '%';
   document.getElementById('progress').style.width = percent;
 }
-
+	/* Here is it's eventlistener */
 window.addEventListener('scroll', function(){
   var top = window.scrollY;
   var height = document.body.getBoundingClientRect().height - window.innerHeight;
   updateProgress(top, height);
 });
+
 		
-	/* The copy function */
+		/* Now the copy function */
 function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
@@ -509,13 +512,12 @@ function copyToClipboard(element) {
 }
 
 
-
-//Get the button
+		/* Here is the scroll back to top code */
+	/* First we get the button */
 var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
+	/* When scrolled down 20px from the top of the document, show the button */
 window.onscroll = function() {scrollFunction()};
-
+	/* Now to define the function */
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -523,8 +525,7 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-
-// When the user clicks on the button, scroll to the top of the document
+	/* When button is clicked, scrolls to the top of the document */
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
