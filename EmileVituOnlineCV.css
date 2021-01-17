@@ -116,6 +116,11 @@ li{
 }
 
 	/* Now the styles for the different classes of the grid elements */
+.empty-div{
+	grid-column: 1/4;
+	height: 100vh;
+}
+
 .intro-div{
 	grid-column: 1/4;
 	text-align: left;
@@ -125,6 +130,7 @@ li{
 .title-left{
 	grid-column: 1/4;
 	text-align: left;
+	height: 20vh;
 }
 
 .title-right{
@@ -132,8 +138,16 @@ li{
 	text-align: left;
 }
 
+.subtitle-left{
+	grid-column: 1/4;
+	text-align: left;
+	height: 10vh;
+}
+.subcontent-left{
+	height: 70vh;
+}
 .content-left{
-	height: 500px;
+	height: 70vh;
 }
 .content-left > img{
 	text-align: right;
@@ -211,7 +225,7 @@ footer {
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column: 2/4;
-	height: 500px;
+	height: 70vh;
 	align-items: center;
 	justify-items: start;
 	border: gray 1px solid;
