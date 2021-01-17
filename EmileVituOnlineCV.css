@@ -103,6 +103,7 @@ li{
 	background-image: linear-gradient(to top, transparent 60px, #fff 60px, #fff 0);
 	padding-left: 10%;
 	padding-right: 10%;
+	/*background: black;*/
 }
 
 .wrap0 > div{
