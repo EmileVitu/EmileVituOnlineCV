@@ -332,9 +332,7 @@ img{
   transform-origin: 10% 50%;
 }
 /* Must check if it is still ok even on smaller device, and play with transform-origin if needed */
-
-	/* Now to style the copy buttons in the contact information*/
-button{
+.nextButton{
   height: 30px;
   width: 80px;
   border-radius: 15px;
@@ -343,6 +341,37 @@ button{
   height: 30px;
   cursor: pointer;
   background-color: white;
+  color: black;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+.prevButton{
+  height: 30px;
+  width: 80px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'helvetNeueBlod';
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  position: fixed;
+  bottom: 30px;
+  left: 90px;
+}
+
+	/* Now to style the copy buttons in the contact information*/
+.copyButton{
+  height: 30px;
+  width: 80px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: 'helvetNeueBlod';
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
 }
 
 	/* Now the scroll to top button */

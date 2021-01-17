@@ -27,7 +27,9 @@
 		<div id="progress" class="progress">
 		</div>
 	</div>
-
+		<!-- Now the previous and next buttons to navigate through the chapters-->
+	<button class="prev prevButton">PREVIOUS</button>
+	<button class="next nextButton">NEXT</button>
 
 		<!-- Here begins the body -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>	
@@ -35,7 +37,7 @@
 	<div class="wrap0">
 
 				<!-- The first Chapter (left) -->
-		<div class="intro-div">
+		<div class="intro-div chapter chap1">
 			<h1>Emile Vitu</h1>
 			<h3>Junior FullStack Web Developer</h3>
 			<h4><i>Responsive Website Development and Design</i></h4>
@@ -53,7 +55,7 @@
 		</div>
 		
 				<!-- The second chapter (title-left)-->
-		<div class="title-left">
+		<div class="title-left chapter chap2">
 			<h2>My skills and certifications</h2>
 		</div>
 
@@ -90,7 +92,7 @@
 		</div>				
 
 				<!-- The fifth chapter (subtitle-right) -->			
-		<div class="title-right">
+		<div class="title-right chapter chap3">
 			<h3>Back-End</h3>
 		</div>
 
@@ -132,7 +134,7 @@
 		</div>	
 
 				<!-- The seventh chapter (title-left) -->	
-		<div class="title-left">
+		<div class="title-left chapter chap4">
 			<h2>My Projects</h2>
 		</div>	
 		
@@ -151,7 +153,7 @@
 		</div>			
 		
 				<!-- The ninth chapter (content-left) -->
-		<div class="content-left-full">
+		<div class="content-left-full chapter chap5">
 			<img class="inline-photo show-on-scroll zoomB" src="data/infinite_scroll.png"></img>
 		</div>
 		<div>
@@ -169,7 +171,7 @@
 		</div>			
 			
 				<!-- The tenth chapter (content-left) -->
-		<div class="content-left-full">
+		<div class="content-left-full chapter chap6">
 			<img src="data/routing_1.png" class="inline-photo show-on-scroll zoomB"></img>
 		</div>
 		<div>
@@ -188,7 +190,7 @@
 		</div>			
 			
 				<!-- The eleventh chapter (content-left) -->
-		<div class="content-left-full">
+		<div class="content-left-full chapter chap7">
 			<img src="data/user_author.png" class="inline-photo show-on-scroll zoomB"></img>
 		</div>
 		<div>			
@@ -206,8 +208,8 @@
 		</div>			
 					
 				<!-- The twelvth chapter (content-left) -->
-		<div class="content-left-full">
-			<img src="data/search_tool.png" class="inline-photo show-on-scroll zoomB""></img>				
+		<div class="content-left-full chapter chap8">
+			<img src="data/search_tool.png" class="inline-photo show-on-scroll zoomB"></img>				
 		</div>
 		<div>			
 			<ul>Reactive search tool:
@@ -224,7 +226,7 @@
 		</div>			
 					
 				<!-- The thirteenth chapter (content-left) -->
-		<div class="content-left-full">Image</div>
+		<div class="content-left-full chapter chap9">Image</div>
 		<div>			
 			<ul>A fifth example ?:
 				<li>?????????????????????????????,</li> 
@@ -240,7 +242,7 @@
 		</div>			
 				
 				<!-- The fourteenth chapter (subtitle-right) -->
-		<div class="description-right">
+		<div class="description-right chapter chap10">
 			<h3>My online CV Website</h3>
 <!-- Must see how to order the short text -->
 			<p>(Quick Intro) This is my second website.<br>
@@ -256,7 +258,7 @@
 				<!-- The fifteenth chapter (content-right) -->
 		<div>
 		</div>
-		<div class="content-right-full">Image</div>
+		<div class="content-right-full chapter chap11">Image</div>
 		<div>		
 			<ul>The infinite scroll:
 				<li>Implemented on this very page,</li> 
@@ -272,7 +274,7 @@
 				<!-- The sixteenth chapter (content-right) -->
 		<div>
 		</div>
-		<div class="content-right-full">Image</div>	
+		<div class="content-right-full chapter chap12">Image</div>	
 		<div>				
 			<ul>CSS GRIDS!:
 				<li>bblablablaabalbalb,</li>
@@ -287,7 +289,7 @@
 		</div>			
 		
 				<!-- The seventeenth chapter (subtitle-left) -->
-		<div class="intro-div">
+		<div class="intro-div chapter chap13">
 			<h3>Anne-Lyse's blog-like website about "Marketing and Communication inovation techniques"</h3>
 <!-- Must see how to order the short text -->
 			<p>
@@ -302,7 +304,7 @@
 		</div>			
 		
 				<!-- The eighteenth chapter (content-left) -->
-		<div class="content-left-full">
+		<div class="content-left-full chapter chap14">
 			Image
 		</div>
 		<div>			
@@ -320,7 +322,7 @@
 		</div>			
 		
 				<!-- The nineteenth chapter (title-right) -->		
-		<div class="title-right2">
+		<div class="title-right2 chapter chap15">
 			<h2>How I work</h2>
 <!-- Do I keep this description ? -->
 			<p>Quick description of my previous job and what I did exactly for people to understand how I developed the following skills</p>
@@ -357,7 +359,7 @@
 		</div>			
 		
 				<!-- The twenty-first chapter (title-left) -->
-		<div class="subtitle-left">
+		<div class="subtitle-left chapter chap16">
 			<h2>My story</h2>
 		</div>
 		
@@ -397,7 +399,7 @@
 					<p id="p1">083 197 0731</p>
 				</div>
 				<div class="right-line">
-					<button onclick="copyToClipboard('#p1')">Copy</button>
+					<button class="copyButton" onclick="copyToClipboard('#p1')">Copy</button>
 				</div>
 				<div class="line">
 					<ul><li>email: </li></ul>
@@ -406,7 +408,7 @@
 					<p id="p2">vitu.emile@yahoo.fr</p>
 				</div>
 				<div class="right-line">
-					<button onclick="copyToClipboard('#p2')">Copy</button>
+					<button class="copyButton" onclick="copyToClipboard('#p2')">Copy</button>
 				</div>
 			</div>
 		</div>
@@ -530,6 +532,34 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+		/* Now the buttons to go from one chapter to the next */
+	/* First we set theses two variables */
+let currChapter = 1;
+const CHAPTER_LENGTH = $('.chapter').length;
+	/* Now to set the function for the chapters */
+function moveChapter() {
+	currChapter = $(this).hasClass("nextButton") ? ++currChapter : --currChapter;
+	if (currChapter < 1) {
+		currChapter = CHAPTER_LENGTH;
+	}
+	if (currChapter > CHAPTER_LENGTH) {
+		currChapter = 1;
+	}
+	$('html,body').animate({
+		scrollTop: $(`.chap${currChapter}`).offset().top
+		},
+    'slow');
+}
+	/* Now to call the function when the buttons are clicked */
+$(".prevButton, .nextButton").on("click", moveChapter);
+/* We have to find away too stop the counting at the bottom and to reset the counter if the user scrolls or whatever */
+
+
+
+
+
 
 
 
