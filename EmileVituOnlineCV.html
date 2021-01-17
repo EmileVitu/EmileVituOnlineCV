@@ -377,20 +377,14 @@
 			</p>
 		</div>
 
-
-		<!-- End of the wrap0 grid -->
-	</div>
-
-	<!-- Beginning of the footer, containing the contact information and links -->
-<footer>
-<!-- Will probably need special classes for the two last chapters -->
-		<div class="title-left contact">
+	<!-- Will probably need special classes for the two last chapters -->
+		<div class="subtitle-left">
 			<h2>Contact</h2>
 		</div>
 
 				<!-- The twenty-third chapter (content-left) -->				
 		<div class="contact">
-<!-- Missing copy help links -->
+	<!-- Missing copy help links -->
 			<div class="contact-details">
 				<div class="line">
 					<ul><li>Telephone: </li></ul>
@@ -399,7 +393,7 @@
 					<p id="p1">083 197 0731</p>
 				</div>
 				<div class="right-line">
-					<button onclick="copyToClipboard('#p1')" id="">Copy</button>
+					<button onclick="copyToClipboard('#p1')">Copy</button>
 				</div>
 				<div class="line">
 					<ul><li>email: </li></ul>
@@ -407,8 +401,8 @@
 				<div>
 					<p id="p2">vitu.emile@yahoo.fr</p>
 				</div>
-				<div class="right-line" name="onTop">
-					<button onclick="copyToClipboard('#p2')" name="onTop">Copy</button>
+				<div class="right-line">
+					<button onclick="copyToClipboard('#p2')">Copy</button>
 				</div>
 			</div>
 		</div>
@@ -432,13 +426,16 @@
 				</div>
 			</div>
 		</div>
-</footer>
 
+
+
+		<!-- End of the wrap0 grid -->
+	</div>
 		<!-- End of body -->
 </body>
 
 
-	<script>
+<script>
 
 		/* Here starts the code for the scroll animation */
 	/* First we set up our requestAnimationFrame method applied to a variable */
@@ -514,18 +511,8 @@ function copyToClipboard(element) {
   $temp.remove();
 }
 
-/* Need to make appear the buttons and links in the footer */
-/*var mybutton2 = document.getElementById("myBtn2");
-window.onscroll = function() {scrollFunction2()};
 
-function scrollFunction2() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton2.style.display = "block";
-  } else {
-    mybutton2.style.display = "none";
-  }
-}
-*/
+
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
