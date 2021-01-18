@@ -287,28 +287,28 @@ body{
 	-webkit-transform: scale(2); /* Safari 3-8 */
 	transform: scale(2); 
     transform-origin: 50% 90%;
-		z-index: 2;
+	z-index: 2;
 }
 .zoomA0:hover {
 	-ms-transform: scale(2); /* IE 9 */
 	-webkit-transform: scale(2); /* Safari 3-8 */
 	transform: scale(2); 
 	transform-origin: 50% 50%;
-		z-index: 2;
+	z-index: 2;
 }
 .zoomA1:hover {
 	-ms-transform: scale(2); /* IE 9 */
 	-webkit-transform: scale(2); /* Safari 3-8 */
 	transform: scale(2); 
     transform-origin: 50% 50%;
-		z-index: 2;
+	z-index: 2;
 }
 .zoomA2:hover {
 	-ms-transform: scale(2); /* IE 9 */
 	-webkit-transform: scale(2); /* Safari 3-8 */
 	transform: scale(2); 
     transform-origin: 50% 50%;
-		z-index: 2;
+	z-index: 2;
 }
 	/* Now a special one for the images in content-left, to avoid going out of the window */
 .zoomB {
