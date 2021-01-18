@@ -30,10 +30,16 @@
 	
 			<!-- We put in the main layout the 3 fixed buttons -->
 		<!-- Now the previous and next buttons to navigate through the chapters-->
-	<button class="prev prevButton"><img src="data/prevButton.png"></img></button>
-	<button class="next nextButton"><img src="data/nextButton.png"></img></button>
+	<button class="prev prevButton">
+		<img src="data/prevButton.png"></img>
+	</button>
+	<button class="next nextButton">
+		<img src="data/nextButton.png"></img>
+	</button>
 		<!-- Now the backe to top button -->
-	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>	
+	<button onclick="topFunction()" id="scrollToTopButton" title="Go to top">
+		<img src="data/scrollToTopButton.png"></img>
+	</button>	
 
 
 
@@ -143,7 +149,9 @@
 		
 				<!-- The fifth chapter -->
 		<div class="content-left-full chapter chap5">
-			<img class="inline-photo show-on-scroll zoomB" src="data/infinite_scroll.png"></img>
+			<div class="zoomB">
+				<img class="inline-photo show-on-scroll" src="data/infinite_scroll.png"></img>
+			</div>
 		</div>
 		<div>
 			<ul>The infinite scroll:
@@ -160,7 +168,9 @@
 			
 				<!-- The sixth chapter -->
 		<div class="content-left-full chapter chap6">
-			<img src="data/routing_1.png" class="inline-photo show-on-scroll zoomB"></img>
+			<div class="zoomB">
+				<img src="data/routing_1.png" class="inline-photo show-on-scroll zoomB"></img>
+			</div>
 		</div>
 		<div>
 			<ul>The routing:
@@ -178,7 +188,9 @@
 			
 				<!-- The seventh chapter -->
 		<div class="content-left-full chapter chap7">
-			<img src="data/user_author.png" class="inline-photo show-on-scroll zoomB"></img>
+			<div class="zoomB">		
+				<img src="data/user_author.png" class="inline-photo show-on-scroll zoomB"></img>
+			</div>
 		</div>
 		<div>			
 			<ul>Database security:
@@ -195,7 +207,9 @@
 					
 				<!-- The eighth chapter -->
 		<div class="content-left-full chapter chap8">
-			<img src="data/search_tool.png" class="inline-photo show-on-scroll zoomB"></img>				
+			<div class="zoomB">			
+				<img src="data/search_tool.png" class="inline-photo show-on-scroll zoomB"></img>				
+			</div>
 		</div>
 		<div>			
 			<ul>Reactive search tool:
@@ -369,7 +383,9 @@
 					<p id="p1">083 197 0731</p>
 				</div>
 				<div class="right-line">
-					<button class="copyButton" onclick="copyToClipboard('#p1')">Copy</button>
+					<button class="copyButton" onclick="copyToClipboard('#p1')">
+						<img src="data/copyButton.png"></img>
+					</button>
 				</div>
 				<div class="line">
 					<ul><li>email: </li></ul>
@@ -378,7 +394,9 @@
 					<p id="p2">vitu.emile@yahoo.fr</p>
 				</div>
 				<div class="right-line">
-					<button class="copyButton" onclick="copyToClipboard('#p2')">Copy</button>
+					<button class="copyButton" onclick="copyToClipboard('#p2')">
+						<img src="data/copyButton.png"></img>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -484,15 +502,15 @@ function copyToClipboard(element) {
 
 		/* Here is the scroll back to top code */
 	/* First we get the button */
-var mybutton = document.getElementById("myBtn");
+var toTopButton = document.getElementById("scrollToTopButton");
 	/* When scrolled down 20px from the top of the document, show the button */
 window.onscroll = function() {scrollFunction()};
 	/* Now to define the function */
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    toTopButton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    toTopButton.style.display = "none";
   }
 }
 	/* When button is clicked, scrolls to the top of the document */
