@@ -26,13 +26,10 @@ h3{
 h4{
 	font-family: "helvetNeueBlod";
 	font-size: 40px;
-	padding-top: 10px;
 }
 h5{
 	font-family: "helvetNeueBlod";
 	font-size: 30px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 }
 	/* For plain text */
 p{
@@ -44,15 +41,14 @@ ul{
 	list-style-image: url('data/bullet-point.jpg');
 	font-family: "helvetNeueBlod";
 	font-size: 30px;
-	margin: 10px;
 }
 li{
 	font-family: "helvetNeueBlod";
 	font-size: 25px;
-	padding-top: 15px;
-	padding-left: 10px;
 }
-
+button > img {
+	height: 18px;
+}
 
 
 		/* First the general layout */
@@ -79,9 +75,8 @@ body{
 	grid-column-gap: 2em;
 		/* This is the transition between chapters when scrolling */
 	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
-	background-image: linear-gradient(to top, transparent 60px, #fff 60px, #fff 0);
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 20vh;
+	padding-right: 20vh;
 	/*background: black;*/
 }
 /*!!!!!!! This is probably to remove !!!!!!!*/
@@ -335,33 +330,30 @@ body{
 
 		/* Now to style the buttons */
 	/* Must check if it is still ok even on smaller device, and play with transform-origin if needed */
+button > img {
+	height: 18px;
+}
 .nextButton{
-  height: 30px;
-  width: 80px;
+  height: 3vh;
+  width: 6vh;
   border-radius: 15px;
-  font-size: 18px;
-  font-family: 'helvetNeueBlod';
-  height: 30px;
   cursor: pointer;
-  background-color: white;
-  color: black;
+  background-color: black;
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  bottom: 3vh;
+  left: 3vh;
+  z-index: 100;
 }
 .prevButton{
-  height: 30px;
-  width: 80px;
+  height: 3vh;
+  width: 6vh;
   border-radius: 15px;
-  font-size: 18px;
-  font-family: 'helvetNeueBlod';
-  height: 30px;
   cursor: pointer;
-  background-color: white;
-  color: black;
+  background-color: black;
   position: fixed;
-  bottom: 30px;
-  left: 90px;
+  bottom: 3vh;
+  left: 11vh;
+  z-index: 100;
 }
 	/* Now to style the copy buttons in the contact information*/
 .copyButton{
