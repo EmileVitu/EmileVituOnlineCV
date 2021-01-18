@@ -53,6 +53,8 @@ li{
 	padding-left: 10px;
 }
 
+
+
 		/* First the general layout */
 html{
 	/*cursor: url('data/cursor.gif'), auto; */
@@ -67,7 +69,6 @@ body{
 	color: white;*/
 	font-family: "helvetNeueBlod";
 	font-weight: 400;
-	margin-top: 2%;
 	position: absolute;
 	/*font-size: xx; will have to do that regarding the titles... */
 }
@@ -75,7 +76,6 @@ body{
 .wrap0{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-row-gap: 1vh;
 	grid-column-gap: 2em;
 		/* This is the transition between chapters when scrolling */
 	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -301,6 +301,7 @@ body{
   width: 100%;
   height: 8px;
   background: #000;
+  z-index: 100;
 }
 	/* Then we can add the progress bar on top  of the background one */
 .progress{
