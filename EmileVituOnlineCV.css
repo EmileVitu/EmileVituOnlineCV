@@ -45,10 +45,9 @@ ul{
 li{
 	font-family: "helvetNeueBlod";
 	font-size: 25px;
+	padding: 2vh;
 }
-button > img {
-	height: 18px;
-}
+
 
 
 		/* First the general layout */
@@ -61,8 +60,8 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
-	/*background: black;
-	color: white;*/
+	background: black;
+	color: white;
 	font-family: "helvetNeueBlod";
 	font-weight: 400;
 	position: absolute;
@@ -72,7 +71,6 @@ body{
 .wrap0{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 2em;
 		/* This is the transition between chapters when scrolling */
 	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 	padding-left: 20vh;
@@ -118,6 +116,7 @@ body{
 }
 .subcontent-left{
 	height: 70vh;
+	padding-top: 20vh;
 }
 .description-left{
 	grid-column: 1/4;
@@ -142,24 +141,37 @@ body{
 .content-left-end{
 	height: 50vh;
 }
+.content-left-end > img {
+	height: 50vh;
+	padding-left: 5vh;
+}
 .content-left-end2{
 	height: 50vh;
 	grid-column: 2/4;
 }
 .content-right{
 	height: 90vh;
+	padding-top: 18vh;
 }
 .content-right2{
 	height: 80vh;
+	grid-column: 2/4;
 }
 .content-right-full{
 	height: 100vh;
+	grid-column: 1/3;
 }
 .myStory{
 	grid-column: 2/4;
 }
-
-
+.text{
+	padding-top: 32vh;
+	grid-column: 2/4;
+}
+.text-right{
+	padding-top: 32vh;
+	text-align: left;
+}
 
 		/* Now the styles for the two other nested grids and the subnest grid */
 .content-left-nested{
@@ -173,7 +185,7 @@ body{
 }
 .content-right-nested{
 	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-column: 1/3;
 	height: 90vh;
 	align-items: center;
@@ -183,11 +195,12 @@ body{
 .subnest{
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column: 2/4;
+	grid-column: 1/4;
 	align-self: end;
 	justify-self: center;
 	border: black 1px solid;
-	padding-bottom: 20px;
+	height: 45vh;
+	padding-top: 5vh;
 }
 	/* Now for contact chapter */
 .contact{
@@ -240,49 +253,74 @@ body{
 		/* Now to put in the zoom while mouse hover */
 	/* First the zoom tool for general images */
 .zoomA {
-  transition: transform .2s;
-  grid-column: 2/3;
+	transition: transform .2s;
+	grid-column: 2/3;
+	height: 25vh;
+	width: 40vh;
 }
 .zoomA0 {
-  transition: transform .2s;
+	transition: transform .2s;
+	padding-right: 10vh;
+}
+.zoomA0 > a > img {
+	height: 25vh;
+	width: 40vh;
 }
 .zoomA1 {
-  transition: transform .2s;
-  grid-column: 2/3;
+	transition: transform .2s;
+	grid-column: 1/2;
+	height: 25vh;
+	width: 40vh;
+	padding-top: 5vh;
+
 }
 .zoomA2 {
-  transition: transform .2s;
-  grid-column: 3/4;
+	transition: transform .2s;
+	grid-column: 2/3;
+  	height: 25vh;
+	width: 40vh;
+	padding-top: 5vh;
+
 }
 .zoomA:hover {
-  -ms-transform: scale(3); /* IE 9 */
-  -webkit-transform: scale(3); /* Safari 3-8 */
-  transform: scale(3); 
+	-ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Safari 3-8 */
+	transform: scale(2); 
+    transform-origin: 50% 90%;
+		z-index: 2;
 }
 .zoomA0:hover {
-  -ms-transform: scale(3); /* IE 9 */
-  -webkit-transform: scale(3); /* Safari 3-8 */
-  transform: scale(3); 
+	-ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Safari 3-8 */
+	transform: scale(2); 
+	transform-origin: 50% 50%;
+		z-index: 2;
 }
 .zoomA1:hover {
-  -ms-transform: scale(3); /* IE 9 */
-  -webkit-transform: scale(3); /* Safari 3-8 */
-  transform: scale(3); 
+	-ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Safari 3-8 */
+	transform: scale(2); 
+    transform-origin: 50% 50%;
+		z-index: 2;
 }
 .zoomA2:hover {
-  -ms-transform: scale(3); /* IE 9 */
-  -webkit-transform: scale(3); /* Safari 3-8 */
-  transform: scale(3); 
+	-ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Safari 3-8 */
+	transform: scale(2); 
+    transform-origin: 50% 50%;
+		z-index: 2;
 }
 	/* Now a special one for the images in content-left, to avoid going out of the window */
 .zoomB {
-  transition: transform .2s;
+	transition: transform .2s;
+	padding-top: 25vh;
 }
 .zoomB:hover {
-  -ms-transform: scale(2.3); /* IE 9 */
-  -webkit-transform: scale(2.3); /* Safari 3-8 */
-  transform: scale(2.3); 
-  transform-origin: 10% 50%;
+	-ms-transform: scale(1.7); /* IE 9 */
+	-webkit-transform: scale(1.7); /* Safari 3-8 */
+	transform: scale(1.7); 
+	transform-origin: 10% 70%;
+  	z-index: 2;
 }
 
 
@@ -372,6 +410,7 @@ body{
 .copyButton{
 	border: none;
 	cursor: pointer;
+	background-color: black;
 }
 .copyButton > img {
 	height: 4vh;
