@@ -1,7 +1,7 @@
 /* The CSS styles for EmileVituOnlineCV */
-/* Change this color! */
 
 
+	/* First the general layout */
 html{
 	/*cursor: url('data/cursor.gif'), auto; */
 		/* This one is for the fading effect */
@@ -38,8 +38,8 @@ html{
 
 	/* First the body features for the whole page */
 body{
-	background: black;
-	color: white;
+	/*background: black;
+	color: white;*/
 	font-family: "helvetNeueBlod";
 	font-weight: 400;
 	margin-top: 2%;
@@ -100,20 +100,16 @@ li{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-row-gap: 1vh;
 	grid-column-gap: 2em;
+		/* This is the transition between chapters when scrolling */
+	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 	background-image: linear-gradient(to top, transparent 60px, #fff 60px, #fff 0);
 	padding-left: 10%;
 	padding-right: 10%;
-	background: black;
+	/*background: black;*/
 }
 
 .wrap0 > div{
 	border: black 1px solid;
-}
-
-
-	/* For the intro paragraph for the first paragraph */
-.intro{
-	padding: 10px;
 }
 
 	/* Now the styles for the different classes of the grid elements */
@@ -387,23 +383,12 @@ img{
 }
 
 .scrollToTopBtn {
-  /* same general styles as before */
-  
-  /* place it at the bottom-right corner */
   position: fixed;
   bottom: 30px;
   right: 30px;
-
-  /* keep it at the top of everything else */
   z-index: 100;
-
-  /* hide with opacity */
   opacity: 0;
-
-  /* also add a translate effect */
   transform: translateY(100px);
-
-  /* and a transition */
   transition: all .5s ease
 }
 
@@ -431,36 +416,6 @@ img{
 }
 
 
-
-
-	/* This is for the fading text at the beginning and the end of the page */
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/* These are general stylings shared for both gradients */
-/*.wrap0:after, .wrap0:before {
-  content: '';
-  position: absolute;
-  left: 0.5em;*/
-  /* 100% is the full width 
-  Then subtract 1em for the padding
-  Then subtract 17px for the scroll bar */
- /* width: calc(100% - 1em - 17px);
-  height: 3em;
-}*/
-/* Top Gradient 
-.wrap0:before {
-  top: 0.5em;
-  border-top-left-radius: 0.5em;
-  background-image: linear-gradient(to bottom, white, transparent);
-}*/
-/* Bottom Gradient 
-.wrap0:after {
-  bottom: 0.5em;
-  border-bottom-left-radius: 0.5em;
-  background-image: linear-gradient(to top, white, transparent);
-}*/
-
 		/* Here are the styles for the images that appear with the scrolling */
 	/* For the photos (layout like a real photo) */
 .inline-photo {
@@ -478,8 +433,6 @@ img{
   opacity: 1;
   transform: rotateZ(0deg);
 }
-
-
 
 
 
