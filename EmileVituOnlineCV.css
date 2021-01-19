@@ -408,6 +408,7 @@ body{
 	bottom: 3vh;
 	left: 11vh;
 	z-index: 100;
+	display: none;
 }
 	/* Finally the copy buttons */
 .copyButton{

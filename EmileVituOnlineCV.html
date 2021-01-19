@@ -431,7 +431,7 @@ function scrollChapters(delta) {
 		window.scrollTo(0, currentChapterOffset + winHeight*2);
 		currentChapter++;
 	} 
-	else if (direction == 'up' && currentChapter > 0 || prev == true) {
+	else if (direction == 'up' && currentChapter > 0) {
 		window.scrollTo(0, currentChapterOffset - winHeight*2);
 		currentChapter--;
 	}
@@ -459,18 +459,31 @@ prevChapter.onclick = function () {
 
 
 
-		/* Here is the scroll back to top code */
+		/* Here is the scroll back to top code and the removal of the navigation buttons when necessary */
 	/* First we get the button */
 var toTopButton = document.getElementById("scrollToTopButton");
 	/* When scrolled down 20px from the top of the document, show the button */
-window.onscroll = function() {scrollFunction()};
-	/* Now to define the function */
+window.onscroll = function() {scrollFunction(), scrollFunction2()};
+	/* Now to define the function and remove the previous button when in top of the page */
 function scrollFunction() {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		toTopButton.style.display = "block";
-	} 
+		prevChapter.style.display = "block";
+	}
 	else {
 		toTopButton.style.display = "none";
+		prevChapter.style.display = "none";
+	}
+}
+	/* Now to remove the next button when in the bottom of the page */
+function scrollFunction2(){
+var totalPageHeight = document.body.scrollHeight;
+var scrollPoint = window.scrollY + window.innerHeight;
+	if (scrollPoint >= totalPageHeight) {
+		nextChapter.style.display = "none";
+	}
+	else {
+		nextChapter.style.display = "block";
 	}
 }
 	/* When the button is clicked, scrolls to the top of the document */
@@ -485,12 +498,14 @@ function topFunction() {
 
 
 
+
+
 		/* The scroll progress bar function */
 function updateProgress(num1, num2){
 	var percent = Math.ceil( num1 / num2 * 100 ) + '%';
 	document.getElementById('progress').style.width = percent;
 }
-	/* Here is it's eventlistener */
+	/* Here is the eventlistener */
 window.addEventListener('scroll', function(){
 	var top = window.scrollY;
 	var height = document.body.getBoundingClientRect().height - window.innerHeight;
@@ -552,16 +567,8 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
-
-
-
-
-
-
-
-
+/* We'll have to remove the console.log at the end */
 console.log('Everything seems to be working for now');
-console.log(currentChapter);
 	</script>
 		<!-- End of the html -->
 </html>
