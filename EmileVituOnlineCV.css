@@ -388,26 +388,26 @@ body{
 }
 	/* Now the next and previous buttons */
 .nextButton{
-  height: 3vh;
-  width: 6vh;
-  border-radius: 2vh;
-  cursor: pointer;
-  background-color: black;
-  position: fixed;
-  bottom: 3vh;
-  left: 3vh;
-  z-index: 100;
+	height: 3vh;
+	width: 6vh;
+	border-radius: 2vh;
+	cursor: pointer;
+	background-color: black;
+	position: fixed;
+	bottom: 3vh;
+	left: 3vh;
+	z-index: 100;
 }
 .prevButton{
-  height: 3vh;
-  width: 6vh;
-  border-radius: 2vh;
-  cursor: pointer;
-  background-color: black;
-  position: fixed;
-  bottom: 3vh;
-  left: 11vh;
-  z-index: 100;
+	height: 3vh;
+	width: 6vh;
+	border-radius: 2vh;
+	cursor: pointer;
+	background-color: black;
+	position: fixed;
+	bottom: 3vh;
+	left: 11vh;
+	z-index: 100;
 }
 	/* Finally the copy buttons */
 .copyButton{

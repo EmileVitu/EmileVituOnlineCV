@@ -30,13 +30,13 @@
 	
 			<!-- We put in the main layout the 3 fixed buttons -->
 		<!-- Now the previous and next buttons to navigate through the chapters-->
-<!--<button id="prevChapter" class="prevButton">
+	<button id="prevChapter" class="prevButton">
 		<img src="data/prevButton.png"></img>
 	</button>
 	<button id="nextChapter" class="nextButton">
 		<img src="data/nextButton.png"></img>
 	</button>
-	-->
+	
 		<!-- Now the backe to top button -->
 	<button onclick="topFunction()" id="scrollToTopButton" title="Go to top">
 		<img src="data/scrollToTopButton.png"></img>
@@ -422,46 +422,40 @@ window.addEventListener('DOMMouseScroll', function(e) {
 	scrollChapters(-1 * e.detail);
 });
 	/* Finally the function */
-function scrollChapters(delta, nextChapter) {
+function scrollChapters(delta) {
 	var direction = (delta > 0) ? 'up' : 'down',
 		currentChapterOffset = currentChapter * winHeight*2;
 
-	if (direction == 'down' && currentChapter <= chapters.length - 2 /*|| nextChapter == true*/) {
+
+	if (direction == 'down' && currentChapter <= chapters.length - 2) {
 		window.scrollTo(0, currentChapterOffset + winHeight*2);
 		currentChapter++;
 	} 
-	else if (direction == 'up' && currentChapter > 0) {
+	else if (direction == 'up' && currentChapter > 0 || prev == true) {
 		window.scrollTo(0, currentChapterOffset - winHeight*2);
 		currentChapter--;
 	}
 /* We'll have to remove the console.log at the end */
   console.log(currentChapter);
 }
-
-
-
-		/* The scroll progress bar function */
-function updateProgress(num1, num2){
-  var percent = Math.ceil( num1 / num2 * 100 ) + '%';
-  document.getElementById('progress').style.width = percent;
-}
-	/* Here is it's eventlistener */
-window.addEventListener('scroll', function(){
-  var top = window.scrollY;
-  var height = document.body.getBoundingClientRect().height - window.innerHeight;
-  updateProgress(top, height);
-});
-
-
-		
-		/* Now the copy function */
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
+	/* Now we can apply this function to the next button */
+var nextChapter = document.getElementById('nextChapter');
+nextChapter.onclick = function () {
+	var currentChapterOffset = currentChapter * winHeight*2;
+	window.scrollTo(0, currentChapterOffset + winHeight*2);
+	currentChapter++;
+/* We'll have to remove the console.log at the end */
+	console.log(currentChapter);
+};
+	/* As well as to the previous button */
+var prevChapter = document.getElementById('prevChapter');
+prevChapter.onclick = function () {
+	var currentChapterOffset = currentChapter * winHeight*2;
+	window.scrollTo(0, currentChapterOffset - winHeight*2);
+	currentChapter--;
+/* We'll have to remove the console.log at the end */
+	console.log(currentChapter);
+};
 
 
 
@@ -472,16 +466,46 @@ var toTopButton = document.getElementById("scrollToTopButton");
 window.onscroll = function() {scrollFunction()};
 	/* Now to define the function */
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    toTopButton.style.display = "block";
-  } else {
-    toTopButton.style.display = "none";
-  }
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		toTopButton.style.display = "block";
+	} 
+	else {
+		toTopButton.style.display = "none";
+	}
 }
 	/* When the button is clicked, scrolls to the top of the document */
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	/* Must not forget to set currentChapter to 0 to avoid conflicts with the scroll function */
+	currentChapter = 0;
+/* We'll have to remove the console.log at the end */
+	console.log(currentChapter);
+}
+
+
+
+		/* The scroll progress bar function */
+function updateProgress(num1, num2){
+	var percent = Math.ceil( num1 / num2 * 100 ) + '%';
+	document.getElementById('progress').style.width = percent;
+}
+	/* Here is it's eventlistener */
+window.addEventListener('scroll', function(){
+	var top = window.scrollY;
+	var height = document.body.getBoundingClientRect().height - window.innerHeight;
+	updateProgress(top, height);
+});
+
+
+		
+		/* Now the copy function */
+function copyToClipboard(element) {
+	var $temp = $("<input>");
+	$("body").append($temp);
+	$temp.val($(element).text()).select();
+	document.execCommand("copy");
+	$temp.remove();
 }
 
 
@@ -536,70 +560,8 @@ function isElementInViewport(el) {
 
 
 
-
-		/* Now the buttons to go from one chapter to the next */
-	/* First we set theses two variables 
-let currChapter = 1;
-const CHAPTER_LENGTH = $('.chapter').length;
-	/* Now to set the function for the chapters 
-function moveChapter() {
-	currChapter = $(this).hasClass("nextButton") ? ++currChapter : --currChapter;
-	if (currChapter < 1) {
-		currChapter = CHAPTER_LENGTH;
-	}
-	if (currChapter > CHAPTER_LENGTH) {
-		currChapter = 1;
-	}
-	$('html,body').animate({
-		scrollTop: $(`.chap${currChapter}`).offset().top
-	},
-    'slow');
-	console.log(currChapter);
-}
-	/* Now to call the function when the buttons are clicked 
-$(".prevButton, .nextButton").on("click", moveChapter);
-
-
-/* We have to find away too stop the counting at the bottom and to reset the counter if the user scrolls or whatever */
-/*function removeNextButton() {
-  if (currChapter = 16) {
-    nextButton.style.display = "none";
-  } else {
-    nextButton.style.display = "block";
-  }
-}
-function removePreviousButton() {
-  if (currChapter = 1) {
-    prevButton.style.display = "none";
-  } else {
-    prevButton.style.display = "block";
-  }
-}*/
-
-/*function moveChapter2() {
-	var elmnt = document.getElementById("empty-div");
-	if (elmnt.scrollIntoView()){
-		
-	}
-}
-*/
-
-/*var nextChapter;
-document.getElementById('nextChapter').onclick = function(){
-alert("button was clicked");
-nextChapter == true;
-console.log(nextChapter);
-}*/
-
-
-
-
-
-
-
-
-
 console.log('Everything seems to be working for now');
+console.log(currentChapter);
 	</script>
 		<!-- End of the html -->
 </html>
