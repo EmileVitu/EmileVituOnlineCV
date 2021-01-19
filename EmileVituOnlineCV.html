@@ -80,12 +80,12 @@
 		</div>
 		<div class="content-left-nested">
 			<div class="zoomA0">
-				<a href="https://www.coursera.org/account/accomplishments/certificate/ECJ3NNW8LQ9Z">
+				<a href="https://www.coursera.org/account/accomplishments/certificate/ECJ3NNW8LQ9Z" target="_blank" rel="noreferrer noopener">
 					<img class="inline-photo show-on-scroll" src="data/Module_1.png"></img>
 				</a>
 			</div>
 			<div class="zoomA0">
-				<a href="https://www.coursera.org/account/accomplishments/certificate/98S9WH26EQ6L">
+				<a href="https://www.coursera.org/account/accomplishments/certificate/98S9WH26EQ6L" target="_blank" rel="noreferrer noopener">
 					<img class="inline-photo show-on-scroll" src="data/Module_2.png"></img>
 				</a>
 			</div>
@@ -100,18 +100,18 @@
 		</div>
 		<div class="content-right-nested">
 			<div class="zoomA1">
-				<a href="https://www.coursera.org/account/accomplishments/certificate/VE72UNPBNZBN">
+				<a href="https://www.coursera.org/account/accomplishments/certificate/VE72UNPBNZBN" target="_blank" rel="noreferrer noopener">
 					<img class="inline-photo show-on-scroll" src="data/Module_3.png"></img>
 				</a>
 			</div>
 			<div class="zoomA2">
-				<a href="https://www.coursera.org/account/accomplishments/certificate/5YJV2T8KPXNA">
+				<a href="https://www.coursera.org/account/accomplishments/certificate/5YJV2T8KPXNA" target="_blank" rel="noreferrer noopener">
 					<img class="inline-photo show-on-scroll" src="data/Module_4.png"></img>
 				</a>
 			</div>
 			<div class="subnest">
 				<div class="zoomA">
-					<a href="https://www.coursera.org/account/accomplishments/certificate/YFRVC6UB7RP3">
+					<a href="https://www.coursera.org/account/accomplishments/certificate/YFRVC6UB7RP3" target="_blank" rel="noreferrer noopener">
 						<img class="inline-photo show-on-scroll" src="data/Module_5.png"></img>
 					</a>
 				</div>
@@ -378,17 +378,17 @@
 		<div class="contact">
 			<div class="contact-nest">
 				<div class="logo1">
-					<a href="https://www.linkedin.com/in/emile-vitu-71a4b260/?locale=en_US">
+					<a href="https://www.linkedin.com/in/emile-vitu-71a4b260/?locale=en_US" target="_blank" rel="noreferrer noopener">
 						<img src="data/LinkedIn.png"></img>
 					</a>
 				</div>
 				<div class="logo2">
-					<a href="https://github.com/EmileVitu">
+					<a href="https://github.com/EmileVitu" target="_blank" rel="noreferrer noopener">
 						<img src="data/GitHub.png"></img>
 					</a>
 				</div>
 				<div class="logo3">
-					<a href="https://www.hackerrank.com/vitu_emile?hr_r=1">
+					<a href="https://www.hackerrank.com/vitu_emile?hr_r=1" target="_blank" rel="noreferrer noopener">
 						<img src="data/HackerRank.png"></img>
 					</a>
 				</div>
@@ -418,7 +418,7 @@ var elementsToShow = document.querySelectorAll('.show-on-scroll');
 	/* It will return all the elements we are looking for and return them in an array */
 	/* Now we can have a function that loops in that array */
 function loop() {
-	elementsToShow.forEach(function (element) {
+	elementsToShow.forEach(function (element){
 	/* With the loop we check if they are in the viewport */
 		if (isElementInViewport(element)) {
 			element.classList.add('is-visible');
@@ -552,7 +552,7 @@ function removePreviousButton() {
 		scdir, hold = false;
 
 	function _scrollY(obj) {
-		var slength, plength, pan, step = 200,
+		var slength, plength, pan, step = 189, // 189vh works for now but there is a issue
 			vh = window.innerHeight / 100,
 			vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
 		if ((this !== undefined && this.id === 'wrap0') || (obj !== undefined && obj.id === 'wrap0')) {

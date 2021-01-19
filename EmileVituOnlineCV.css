@@ -60,8 +60,8 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
-	background: black;
-	color: white;
+	/*background: black;
+	color: white;*/
 	font-family: "helvetNeueBlod";
 	font-weight: 400;
 	position: absolute;
