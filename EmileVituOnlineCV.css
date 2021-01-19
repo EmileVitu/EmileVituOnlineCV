@@ -5,45 +5,49 @@
 		/* Now the font styles */
 	/* This is to import my special font */
 @font-face {
-	font-family: helvetNeueBlod;
+	font-family: helvetNeueBold;
 	src: url(data/HelveticaNeueBold.ttf);
+}
+@font-face {
+	font-family: montserratBold;
+	src: url(data/montserratBold.ttf);
 }
 	/* For the main title of the page */
 h1{
-	font-family: "helvetNeueBlod";
+	font-family: "montserratBold";
 	font-size: 200px;
 }
 	/* For titles */
 h2{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 100px;
 }
 	/* For subtitles */
 h3{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 50px;
 }
 h4{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 40px;
 }
 h5{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 30px;
 }
 	/* For plain text */
 p{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 25px;
 	
 }
 ul{
 	list-style-image: url('data/bullet-point.jpg');
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 30px;
 }
 li{
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-size: 25px;
 	padding: 2vh;
 }
@@ -62,7 +66,7 @@ html{
 body{
 	/*background: black;
 	color: white;*/
-	font-family: "helvetNeueBlod";
+	font-family: "helvetNeueBold";
 	font-weight: 400;
 	position: absolute;
 	/*font-size: xx; will have to do that regarding the titles... */
@@ -81,7 +85,6 @@ body{
 .wrap0 > div{
 	border: black 1px solid;
 }
-
 
 
 	/* Now the styles for the different classes of the grid elements */
