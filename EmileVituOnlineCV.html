@@ -30,12 +30,13 @@
 	
 			<!-- We put in the main layout the 3 fixed buttons -->
 		<!-- Now the previous and next buttons to navigate through the chapters-->
-	<button class="prev prevButton">
+<!--<button id="prevChapter" class="prevButton">
 		<img src="data/prevButton.png"></img>
 	</button>
-	<button class="next nextButton">
+	<button id="nextChapter" class="nextButton">
 		<img src="data/nextButton.png"></img>
 	</button>
+	-->
 		<!-- Now the backe to top button -->
 	<button onclick="topFunction()" id="scrollToTopButton" title="Go to top">
 		<img src="data/scrollToTopButton.png"></img>
@@ -407,34 +408,111 @@
 /* Here starts the JavaScript code for EmileVituOnlineCV */
 
 
-		/* Here starts the code for the scroll animation */
-	/* First we set up our requestAnimationFrame method applied to a variable */
-	/* We also have a fallback function that waits one 60th of a second before it callsback 
+
+		/* First the scroll function to navigate through chapters */
+	/* First we declare variables */
+var winHeight = window.innerHeight,
+	chapters = document.getElementsByClassName('chapter'),
+	currentChapter = 0;
+	/* Then the event listeners */
+window.addEventListener('mousewheel', function(e) {
+	scrollChapters(e.wheelDelta);
+});
+window.addEventListener('DOMMouseScroll', function(e) {
+	scrollChapters(-1 * e.detail);
+});
+	/* Finally the function */
+function scrollChapters(delta, nextChapter) {
+	var direction = (delta > 0) ? 'up' : 'down',
+		currentChapterOffset = currentChapter * winHeight*2;
+
+	if (direction == 'down' && currentChapter <= chapters.length - 2 /*|| nextChapter == true*/) {
+		window.scrollTo(0, currentChapterOffset + winHeight*2);
+		currentChapter++;
+	} 
+	else if (direction == 'up' && currentChapter > 0) {
+		window.scrollTo(0, currentChapterOffset - winHeight*2);
+		currentChapter--;
+	}
+/* We'll have to remove the console.log at the end */
+  console.log(currentChapter);
+}
+
+
+
+		/* The scroll progress bar function */
+function updateProgress(num1, num2){
+  var percent = Math.ceil( num1 / num2 * 100 ) + '%';
+  document.getElementById('progress').style.width = percent;
+}
+	/* Here is it's eventlistener */
+window.addEventListener('scroll', function(){
+  var top = window.scrollY;
+  var height = document.body.getBoundingClientRect().height - window.innerHeight;
+  updateProgress(top, height);
+});
+
+
+		
+		/* Now the copy function */
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
+
+
+		/* Here is the scroll back to top code */
+	/* First we get the button */
+var toTopButton = document.getElementById("scrollToTopButton");
+	/* When scrolled down 20px from the top of the document, show the button */
+window.onscroll = function() {scrollFunction()};
+	/* Now to define the function */
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTopButton.style.display = "block";
+  } else {
+    toTopButton.style.display = "none";
+  }
+}
+	/* When the button is clicked, scrolls to the top of the document */
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+
+		/* Now the requestAnimationFrame method applied to a variable */
+	/* We also have a fallback function that waits one 60th of a second before it callsback */
 var scroll = window.requestAnimationFrame || function(callback){ 
 	window.setTimeout(callback, 1000/60)
 };
-	/* Next we set a variable for all the elements with the 'show-on-scroll' class 
+	/* Next we set a variable for all the elements with the 'show-on-scroll' class */
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 	/* It will return all the elements we are looking for and return them in an array */
-	/* Now we can have a function that loops in that array 
+	/* Now we can have a function that loops in that array */
 function loop() {
 	elementsToShow.forEach(function (element){
-	/* With the loop we check if they are in the viewport 
+	/* With the loop we check if they are in the viewport */
 		if (isElementInViewport(element)) {
 			element.classList.add('is-visible');
 		}
-	/* If they are we can add to them the class 'is-visible' and if ot we remove them 
+	/* If they are we can add to them the class 'is-visible' and if ot we remove them */
 		else {
 			element.classList.remove('is-visible');
 		}
 	});
 	scroll(loop);
 }
-	/* Now we call the loop for the first time 
+	/* Now we call the loop for the first time */
 loop();
-	/* Helper function from: http://stackoverflow.com/a/7557433/274826 
+	/* Helper function from: http://stackoverflow.com/a/7557433/274826 */
 function isElementInViewport(el) {
-	/*  
+	/*  */
   if (typeof jQuery === "function" && el instanceof jQuery) {
     el = el[0];
   }
@@ -452,47 +530,9 @@ function isElementInViewport(el) {
 }
 
 
-		/* The scroll progress bar function */
-function updateProgress(num1, num2){
-  var percent = Math.ceil( num1 / num2 * 100 ) + '%';
-  document.getElementById('progress').style.width = percent;
-}
-	/* Here is it's eventlistener */
-window.addEventListener('scroll', function(){
-  var top = window.scrollY;
-  var height = document.body.getBoundingClientRect().height - window.innerHeight;
-  updateProgress(top, height);
-});
-
-		
-		/* Now the copy function */
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
 
 
-		/* Here is the scroll back to top code */
-	/* First we get the button */
-var toTopButton = document.getElementById("scrollToTopButton");
-	/* When scrolled down 20px from the top of the document, show the button */
-window.onscroll = function() {scrollFunction()};
-	/* Now to define the function */
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    toTopButton.style.display = "block";
-  } else {
-    toTopButton.style.display = "none";
-  }
-}
-	/* When button is clicked, scrolls to the top of the document */
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+
 
 
 
@@ -544,31 +584,15 @@ function removePreviousButton() {
 }
 */
 
-//initialize
-var winHeight = window.innerHeight,
-  chapters = document.getElementsByClassName('chapter'),
-  currentChapter = 0;
+/*var nextChapter;
+document.getElementById('nextChapter').onclick = function(){
+alert("button was clicked");
+nextChapter == true;
+console.log(nextChapter);
+}*/
 
-window.addEventListener('mousewheel', function(e) {
-  scrollPages(e.wheelDelta);
-});
-window.addEventListener('DOMMouseScroll', function(e) {
-  scrollPages(-1 * e.detail);
-});
 
-function scrollPages(delta) {
-  var direction = (delta > 0) ? 'up' : 'down',
-    currentChapterOffset = currentChapter * winHeight*2;
 
-  if (direction == 'down' && currentChapter <= chapters.length - 2) {
-    window.scrollTo(0, currentChapterOffset + winHeight*2);
-    currentChapter++;
-  } else if (direction == 'up' && currentChapter > 0) {
-    window.scrollTo(0, currentChapterOffset - winHeight*2);
-    currentChapter--;
-  }
-  console.log(currentChapter);
-}
 
 
 
