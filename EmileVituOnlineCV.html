@@ -315,7 +315,7 @@
 		
 				<!-- The thirteenth chapter -->
 		<div class="intro-div chapter chap13">
-			<h3>Anne-Lyse's blog-like website</h3>
+			<h3>Marketing blog-like website</h3>
 <!-- Must see how to order the short text -->
 			<p>
 				This is a project I will soon be starting on a request.<br>
@@ -333,12 +333,13 @@
 				Patience... In a few weeks, this website should be online!
 			</p>
 		</div>
+
 				<!-- Another empty div -->
-		<div class="empty-div">
+<!--		<div class="empty-div">
 		</div>			
 		
 				<!-- The fourteenth chapter -->
-		<div class="content-left-full chapter chap14">
+<!--		<div class="content-left-full chapter chap14">
 			Image
 		</div>
 		<div class="text">			
@@ -348,6 +349,8 @@
 				<li>?????????????????????????????.</li>
 			</ul>
 		</div>
+This we will put online as soon as the project has started
+
 				<!-- Another empty div -->
 		<div class="empty-div">
 		</div>			
@@ -384,15 +387,14 @@
 		</div>
 		<div class="content-left-end2">
 			<p>
-				Having acquiring a Masters degree in Hydrogeology (University of Rennes - France),
-				I worked for 6 years in various jobs including 3 years in Environmental consultancy.<br>
-				In 2020, I decided to make a professional transition to
-				Web-Development. Indeed, I always have been very keen with IT, computing, gaming and new technologies, 
+				In 2014, I obtained a Masters degree in Hydrogeology (University of Rennes - France),
+				I then worked for 6 years in various jobs including 3 years in Environmental consultancy.<br>
+				In 2020, I decided to make a professional transition to	Web-Development. 
+				Indeed, I always have been very keen with IT, computing, gaming and new technologies, 
 				furthermore, I already in the past have used some coding in HTML and in Python (with QGIS).<br>
-				Despite that, I am a very devoted and passionate person, I apreciate team-working a lot,
+				Despite that, I am a very devoted and passionate person, and I apreciate team-working,
 				and look forward to working on exciting projects, while achieving them flawlessly.<br>
-				Finally, I have many passions such as music (I play the piano and the guitar),
-				as well as sports (I play rugby in a local Dublin team).
+				Finally, I have many passions such as piano and rugby playing.
 			</p>
 		</div>
 		<div class="subtitle-left">
@@ -463,7 +465,7 @@
 var winHeight = window.innerHeight,
 	chapters = document.getElementsByClassName('chapter'),
 	currentChapter = 0;
-	/* Then the event listeners */
+	/* Then the event listeners (second one for firefox) */
 window.addEventListener('mousewheel', function(e) {
 	scrollChapters(e.wheelDelta);
 });
@@ -474,8 +476,6 @@ window.addEventListener('DOMMouseScroll', function(e) {
 function scrollChapters(delta) {
 	var direction = (delta > 0) ? 'up' : 'down',
 		currentChapterOffset = currentChapter * winHeight*2;
-
-
 	if (direction == 'down' && currentChapter <= chapters.length - 2) {
 		window.scrollTo(0, currentChapterOffset + winHeight*2);
 		currentChapter++;

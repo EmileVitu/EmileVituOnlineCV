@@ -69,7 +69,8 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
-	background: black;
+	/*background: url(data/background.jpg);
+	z-index: -1;*/
 	color: white;
 	font-family: "helvetNeueBold";
 	font-weight: 400;
@@ -85,6 +86,7 @@ body{
 	padding-right: 20vh;
 	background: black;
 }
+
 
 
 	/* Now the styles for the different classes of the grid elements */
@@ -131,15 +133,8 @@ body{
 	text-align: left;
 	height: 100vh;
 }
-.content-left{
-	height: 70vh;
-}
 .content-left-full{
 	height: 100vh;
-}
-.content-left > img{
-	text-align: right;
-	height: 350px;
 }
 .content-left-end{
 	height: 50vh;
@@ -226,26 +221,28 @@ body{
 	height: 5vh;
 }
 .right-line{
-	padding-left: 20px;
-	padding-top: 4px;
+	padding-left: 5vh;
 }
 .logo1{
 	grid-column: 1/2;
 }
 .logo1 > a >img{
 	height: 6vh;
+	padding-bottom: 1vh;
 }
 .logo2{
 	grid-column: 2/3;
 }
 .logo2 > a >img{
 	height: 6vh;
+	padding-bottom: 1vh;
 }
 .logo3{
 	grid-column: 3/4;
 }
 .logo3 > a >img{
 	height: 6vh;
+	padding-bottom: 1vh;
 }
 
 
@@ -332,13 +329,13 @@ body{
   top: 0;
   left: 0;
   width: 100%;
-  height: 8px;
+  height: 1vh;
   background: #000;
   z-index: 100;
 }
 	/* Then we can add the progress bar on top  of the background one */
 .progress{
-  height: 8px;
+  height: 1vh;
   background: #999;
   width: 0;
   transition: width 0.5s;
