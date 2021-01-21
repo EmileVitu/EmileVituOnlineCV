@@ -181,13 +181,13 @@ window.onload = function(){
 
 
 
-	/* The scrollToTopButton */
+	/* The scrollToTopButton 
 function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
-	/* Must not forget to set currentChapter to 0 to avoid conflicts with the scroll function */
+	/* Must not forget to set currentChapter to 0 to avoid conflicts with the scroll function 
 	currentChapter = 0;
-/* We'll have to remove the console.log at the end */
+/* We'll have to remove the console.log at the end 
 	console.log(currentChapter);
 }
 
