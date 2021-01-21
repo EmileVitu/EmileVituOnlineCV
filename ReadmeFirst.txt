@@ -1,0 +1,1 @@
+To open my CV website in your browser, please open the index.html file in this folder !

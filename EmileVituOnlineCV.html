@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 	<!-- Welcome to the EmileVituOnlineCV website -->
 <head>
 		<!-- Creating the Title of the page -->
 	<title>EmileVituOnlineCV</title>
 		<!-- First to add online packages -->
+			<!-- Ading the js code for older than IE9 browsers -->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![end if]-->
 			<!-- Adding jquery and bootstrapp -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -14,6 +16,7 @@
 			<!-- Adding my CSS stylesheet -->
 	<link rel="stylesheet" href="EmileVituOnlineCV.css">
 		<!-- The code to make it responsive -->
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- End of the head -->
 </head>
@@ -51,8 +54,8 @@
 		<div class="intro-div chapter chap1">
 			<h1>Emile Vitu</h1>
 			<h3>Junior FullStack Web Developer</h3>
-			<h4><i>Course: Responsive Website Development and Design</i></h4>
-			<h5><i>At: Goldsmith - University of London</i></h5>
+			<p><i>Course: Responsive Website Development and Design</i><br>
+			<i>At: Goldsmith - University of London, via Coursera</i></p>
 			<p>
 				Welcome to my online web curriculum vitae.
 			</p>
@@ -62,7 +65,7 @@
 				and start tackling new exciting challenges!
 			</p>
 			<p>
-				I would be happy to discuss with you, should you have any questions, my contact details are at the bottom of the page.
+				Beware to be gentle with the mousewheel, the scrolling is sensitive on this page. You can also use the buttons on your left to navigate.
 			</p>
 			<p>
 				I hope you enjoy your visit!
@@ -618,6 +621,10 @@ function isElementInViewport(el) {
 }
 /* We'll have to remove the console.log at the end */
 console.log('Everything seems to be working for now');
+
+
+/* Johnny's advice
+document.getElementsByClassName("chapter")[currentChapter].scrollIntoView()*/
 	</script>
 		<!-- End of the html -->
 </html>
