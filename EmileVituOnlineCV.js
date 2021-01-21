@@ -29,66 +29,6 @@ function scrollChapters(delta) {
 /* We'll have to remove the console.log at the end */
   console.log(currentChapter);
 }
-	/* Now we can apply this function to the next button */
-var nextChapter = document.getElementById('nextChapter');
-nextChapter.onclick = function () {
-	var currentChapterOffset = currentChapter * winHeight*2;
-	window.scrollTo(0, currentChapterOffset + winHeight*2);
-	currentChapter++;
-/* We'll have to remove the console.log at the end */
-	console.log(currentChapter);
-};
-	/* As well as to the previous button */
-var prevChapter = document.getElementById('prevChapter');
-prevChapter.onclick = function () {
-	var currentChapterOffset = currentChapter * winHeight*2;
-	window.scrollTo(0, currentChapterOffset - winHeight*2);
-	currentChapter--;
-/* We'll have to remove the console.log at the end */
-	console.log(currentChapter);
-};
-
-
-
-		/* Here is the scroll back to top code and the removal of the navigation buttons when necessary */
-	/* First we get the button */
-var toTopButton = document.getElementById("scrollToTopButton");
-	/* When scrolled down 20px from the top of the document, show the button */
-window.onscroll = function() {scrollFunction(), scrollFunction2()};
-	/* Now to define the function and remove the previous button when in top of the page */
-function scrollFunction() {
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		toTopButton.style.display = "block";
-		prevChapter.style.display = "block";
-	}
-	else {
-		toTopButton.style.display = "none";
-		prevChapter.style.display = "none";
-	}
-}
-	/* Now to remove the next button when in the bottom of the page */
-function scrollFunction2(){
-var totalPageHeight = document.body.scrollHeight;
-var scrollPoint = window.scrollY + window.innerHeight;
-	if (scrollPoint >= totalPageHeight) {
-		nextChapter.style.display = "none";
-	}
-	else {
-		nextChapter.style.display = "block";
-	}
-}
-	/* When the button is clicked, scrolls to the top of the document */
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-	/* Must not forget to set currentChapter to 0 to avoid conflicts with the scroll function */
-	currentChapter = 0;
-/* We'll have to remove the console.log at the end */
-	console.log(currentChapter);
-}
-
-
-
 
 
 		/* The scroll progress bar function */
@@ -102,8 +42,6 @@ window.addEventListener('scroll', function(){
 	var height = document.body.getBoundingClientRect().height - window.innerHeight;
 	updateProgress(top, height);
 });
-
-
 		
 		/* Now the copy function */
 function copyToClipboard(element) {
@@ -116,6 +54,58 @@ function copyToClipboard(element) {
 
 
 
+
+
+
+	/* This will be read only when the web browser has loaded the whole page */
+window.onload=function(){
+		/* Now we can apply this function to the next button */
+	var nextChapter = document.getElementById('nextChapter');
+	nextChapter.onclick = function () {
+		var currentChapterOffset = currentChapter * winHeight*2;
+		window.scrollTo(0, currentChapterOffset + winHeight*2);
+		currentChapter++;
+	/* We'll have to remove the console.log at the end */
+		console.log(currentChapter);
+	};
+		/* As well as to the previous button */
+	var prevChapter = document.getElementById('prevChapter');
+	prevChapter.onclick = function () {
+		var currentChapterOffset = currentChapter * winHeight*2;
+		window.scrollTo(0, currentChapterOffset - winHeight*2);
+		currentChapter--;
+	/* We'll have to remove the console.log at the end */
+		console.log(currentChapter);
+	};
+			/* Here is the scroll back to top code and the removal of the navigation buttons when necessary */
+		/* First we get the button */
+	var toTopButton = document.getElementById("scrollToTopButton");
+		/* When scrolled down 20px from the top of the document, show the button */
+	window.onscroll = function() {scrollFunction(), scrollFunction2()};
+		/* Now to define the function and remove the previous button when in top of the page */
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			toTopButton.style.display = "block";
+			prevChapter.style.display = "block";
+		}
+		else {
+			toTopButton.style.display = "none";
+			prevChapter.style.display = "none";
+		}
+	}
+
+		/* Now to remove the next button when in the bottom of the page */
+	function scrollFunction2(){
+	var totalPageHeight = document.body.scrollHeight;
+	var scrollPoint = window.scrollY + window.innerHeight;
+		if (scrollPoint >= totalPageHeight) {
+			nextChapter.style.display = "none";
+		}
+		else {
+			nextChapter.style.display = "block";
+		}
+	}
+	
 		/* Now the requestAnimationFrame method applied to a variable */
 	/* We also have a fallback function that waits one 60th of a second before it callsback */
 var scroll = window.requestAnimationFrame || function(callback){ 
@@ -158,9 +148,50 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+}
+
+
+
+
+	/* When the button is clicked, scrolls to the top of the document */
+function topFunction() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	/* Must not forget to set currentChapter to 0 to avoid conflicts with the scroll function */
+	currentChapter = 0;
+/* We'll have to remove the console.log at the end */
+	console.log(currentChapter);
+}
+
+
+
+
+
+
+
+
+
 /* We'll have to remove the console.log at the end */
 console.log('Everything seems to be working for now');
 
 
 /* Johnny's advice
 document.getElementsByClassName("chapter")[currentChapter].scrollIntoView()*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End of the EmileVituOnlineCV JavaScript code */
