@@ -6,15 +6,15 @@
 	/* This is to import my special font */
 @font-face {
 	font-family: helvetNeueBold;
-	src: url(data/HelveticaNeueBold.ttf);
+	src: url(Public/HelveticaNeueBold.ttf);
 }
 @font-face {
 	font-family: montserratBold;
-	src: url(data/montserratBold.ttf);
+	src: url(Public/montserratBold.ttf);
 }
 @font-face {
 	font-family: ohio;
-	src: url(data/Ohio.ttf);
+	src: url(Public/Ohio.ttf);
 }
 	/* For the main title of the page */
 h1{
@@ -46,7 +46,7 @@ p{
 	padding-top: 2vh;
 }
 ul{
-	list-style-image: url('data/bullet-point.jpg');
+	list-style-image: url('Public/bullet-point.jpg');
 	font-family: "helvetNeueBold";
 	font-size: 3vh;
 }
@@ -60,7 +60,7 @@ li{
 
 		/* First the general layout */
 html{
-	/*cursor: url('data/cursor.gif'), auto; */
+	/*cursor: url('Public/cursor.gif'), auto; */
 		/* This one is for the fading effect */
 	box-sizing: border-box;
 	scroll-behavior: smooth;
@@ -68,7 +68,7 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
-	/*background: url(data/background.jpg);
+	/*background: url(Public/background.jpg);
 	z-index: -1;*/
 	color: white;
 	font-family: "helvetNeueBold";
