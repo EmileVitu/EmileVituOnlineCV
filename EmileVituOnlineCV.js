@@ -192,10 +192,6 @@ function topFunction() {
 }
 
 
-/* kjndkkkfkfk */
-
-
-
 
 
 
