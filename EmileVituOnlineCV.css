@@ -312,10 +312,10 @@ body{
 	padding-top: 25vh;
 }
 .zoomB:hover {
-	-ms-transform: scale(2); /* IE 9 */
-	-webkit-transform: scale(2); /* Safari 3-8 */
-	transform: scale(2); 
-	transform-origin: 5% 65%;
+	-ms-transform: scale(1.7); /* IE 9 */
+	-webkit-transform: scale(1.7); /* Safari 3-8 */
+	transform: scale(1.7); 
+	transform-origin: 10% 70%;
   	z-index: 2;
 }
 
