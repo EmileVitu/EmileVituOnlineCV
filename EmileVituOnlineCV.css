@@ -412,6 +412,12 @@ body{
 .copyButton > img {
 	height: 4vh;
 }
+
+#firstLink{
+	color:white;
+}
+
+
 	/* End of the buttons styling */
 
 
