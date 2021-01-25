@@ -62,14 +62,12 @@ li{
 html{
 	/*cursor: url('Public/cursor.gif'), auto; */
 		/* This one is for the fading effect */
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	scroll-behavior: smooth;
 
 }
 	/* Then the body features for the whole page */
 body{
-	/*background: url(Public/background.jpg);
-	z-index: -1;*/
 	color: white;
 	font-weight: 400;
 	position: absolute;
