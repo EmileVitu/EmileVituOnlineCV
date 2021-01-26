@@ -105,6 +105,7 @@ body{
 	grid-column: 3/4;
 	text-align: left;
 	height: 10vh;
+	padding-left: 1vh;
 }
 .title-right2{
 	grid-column: 2/4; 
@@ -137,9 +138,8 @@ body{
 	height: 66vh;
 }
 .content-left-end > img {
-	padding-top: 4vh;
-	height: 55vh;
-	padding-left: 5vh;
+	padding-top: 3vh;
+	height: 49vh;
 }
 .content-left-end2{
 	height: 66vh;
@@ -147,7 +147,7 @@ body{
 }
 .content-right{
 	height: 90vh;
-	padding-top: 25vh;
+	padding-top: 8vh;
 }
 .content-right2{
 	height: 80vh;
@@ -182,8 +182,8 @@ body{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column: 2/4;
 	height: 70vh;
-	align-items: center;
 	justify-items: start;
+	padding-top: 14vh;
 }
 .content-right-nested{
 	display:grid;
@@ -206,7 +206,7 @@ body{
 .contact{
 	grid-column: 1/4;
 	display: grid;
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 1fr 1fr 1fr;
 }
 	/* Now the contact's own nest */
 .contact-nest{
@@ -226,27 +226,29 @@ body{
 	height: 7vh;
 }
 .logo1{
-	grid-column: 2/3;
+	grid-column: 1/2;
 }
 .logo1 > a >img{
 	height: 8vh;
 	margin-top: 4vh;
 }
 .logo2{
-	grid-column: 4/5;
+	grid-column: 3/4;
 }
 .logo2 > a >img{
 	height: 8vh;
 	margin-top: 4vh;
 }
 .logo3{
-	grid-column: 6/7;
+	grid-column: 5/6;
 }
 .logo3 > a >img{
 	height: 8vh;
 	margin-top: 4vh;
 }
-
+.postItImage {
+	padding-top: 1vh;
+}
 
 
 		/* Now to put in the zoom while mouse hover */
