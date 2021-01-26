@@ -6,15 +6,15 @@
 	/* This is to import my special font */
 @font-face {
 	font-family: helvetNeueBold;
-	src: url(Public/HelveticaNeueBold.ttf);
+	src: url(public/HelveticaNeueBold.ttf);
 }
 @font-face {
 	font-family: montserratBold;
-	src: url(Public/montserratBold.ttf);
+	src: url(public/montserratBold.ttf);
 }
 @font-face {
 	font-family: ohio;
-	src: url(Public/Ohio.ttf);
+	src: url(public/Ohio.ttf);
 }
 	/* For the main title of the page */
 h1{
@@ -46,7 +46,7 @@ p{
 	padding-top: 2vh;
 }
 ul{
-	list-style-image: url('Public/bullet-point.jpg');
+	list-style-image: url('public/bullet-point.jpg');
 	font-family: "helvetNeueBold", helvetica;
 	font-size: 3vh;
 }
