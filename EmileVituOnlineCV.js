@@ -79,7 +79,7 @@ function copyToClipboard(element) {
 
 	/* This will be read only when the web browser has loaded the whole page */
 window.onload = function(){
-		/	* The next chapter button */
+		/* The next chapter button */
 	var nextChapter = document.getElementById('nextChapter');
 	nextChapter.onclick = function () {
 		var currentChapterOffset = currentChapter * winHeight*2;
