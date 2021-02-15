@@ -103,7 +103,7 @@ window.onload = function(){
 	
 	
 	
-			/* Here is the scroll back to top code and the removal of the navigation buttons when necessary */
+		/* Here is the scroll back to top code and the removal of the navigation buttons when necessary */
 	/* First we get the button */
 	var toTopButton = document.getElementById("scrollToTopButton");
 		/* When scrolled down 20px from the top of the document, show the button */
