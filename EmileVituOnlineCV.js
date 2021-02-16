@@ -139,7 +139,7 @@ window.onload = function(){
 		window.setTimeout(callback, 1000/60)
 	};
 		/* Next we set a variable for all the elements with the 'show-on-scroll' class */
-	var elementsToShow = document.querySelectorAll('.show-on-scroll');
+	var elementsToShow = document.querySelectorAll('.inlinePhoto');
 		/* It will return all the elements we are looking for and return them in an array */
 		/* Now we can have a function that loops in that array */
 	function loop() {

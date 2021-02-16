@@ -48,11 +48,10 @@ p{
 ul{
 	list-style-image: url('public/bullet-point.jpg');
 	font-family: "helvetNeueBold", helvetica;
-	font-size: 3vh;
 }
 li{
 	font-family: "helvetNeueBold", helvetica;
-	font-size: 3vh;
+	font-size: 2vh;
 	padding: 2vh;
 } 
 h4{
@@ -69,13 +68,15 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
+/* This part is for the general text styles */
 	color: white;
 	font-weight: 400;
+/* These are for the rest */
 	position: absolute;
 	background: transparent;
 }
 	/* Now the styles for the general grid */
-.wrap0{
+.wrapper{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding-left: 20vh;
@@ -85,22 +86,26 @@ body{
 
 
 
-	/* Now the styles for the different classes of the grid elements */
-.empty-div{
+		/* Now the styles for the different classes of the grid elements */
+
+	/* First the empty div for the empty slides */
+.emptyDiv{
 	grid-column: 1/4;
 	height: 100vh;
 }
-.intro-div{
+	/* Now the regular container divs for the slides */
+.introDiv{
 	grid-column: 1/4;
 	text-align: left;
 	height: 100vh;
 }
-.title-left{
+	/* The classes for the titles */
+.titleLeft{
 	grid-column: 1/4;
 	text-align: left;
 	height: 20vh;
 }
-.title-right{
+.titleRight{
 	grid-column: 3/4;
 	text-align: left;
 	height: 10vh;
@@ -111,104 +116,80 @@ body{
 	text-align: left;
 	height: 20vh;
 }
-.subtitle-left{
+	/* The classes for the subtitles */
+.subtitleLeft{
 	grid-column: 1/4;
 	text-align: left;
 	height: 10vh;
 }
-.subcontent-left{
+	/* The classes for the content */
+.subContentLeft{
 	height: 70vh;
 	padding-top: 13vh;
 }
-.website-left{
-	grid-column: 1/2;
-	height: 70vh;
-}
-.website-right{
-	grid-column: 2/4;
-	height: 70vh;
-}
-.description-left{
-	grid-column: 1/4;
-	text-align: left;
-	height: 80vh;
-}
-.description-right{
-	grid-column: 2/4;
-	text-align: left;
-	height: 100vh;
-}
-.content-left-full{
-	height: 100vh;
-	grid-column: 1/3;
-}
-.content-left-end{
-	height: 66vh;
-}
-.content-left-end > img {
-	padding-top: 3vh;
-	height: 49vh;
-}
-.content-left-end2{
-	height: 66vh;
-	grid-column: 2/4;
-}
-.content-right{
+.contentRight{
 	height: 90vh;
 	padding-top: 8vh;
 }
-.content-right2{
-	height: 80vh;
-	grid-column: 2/4;
-	padding-left: 4vh;
-}
-.content-right-full{
-	height: 100vh;
+.websiteLeft{
 	grid-column: 1/2;
+	height: 80vh;
 }
-.myStory{
+.websiteRight{
 	grid-column: 2/4;
+	height: 70vh;
+}
+.contentLeftFull{
+	height: 100vh;
+	grid-column: 1/3;
 }
 .text{
 	padding-top: 23vh;
 	padding-left: 4vh;
 	grid-column: 3/4;
 }
-.text2{
-	padding-top: 26vh;
-	grid-column: 3/4;
+.contentRightFull{
+	height: 100vh;
+	grid-column: 1/2;
 }
-.text-right{
-	padding-top: 32vh;
-	text-align: left;
+.contentRight2{
+	height: 80vh;
+	grid-column: 2/4;
+	padding-left: 4vh;
+}
+.contentLeftEnd{
+	height: 66vh;
+}
+.contentLeftEnd > img {
+	padding-top: 3vh;
+	height: 49vh;
+}
+.contentLeftEnd2{
+	height: 66vh;
 	grid-column: 2/4;
 }
-
-		/* Now the styles for the two other nested grids and the subnest grid */
-.content-left-nested{
+	/* Now the styles for the three nested grids */
+.contentLeftNested{
 	display:grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-column: 2/4;
 	height: 70vh;
-	justify-items: start;
 	padding-top: 14vh;
 }
-.content-right-nested{
+.contentRightNested{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column: 1/3;
 	height: 90vh;
-	align-items: center;
-	justify-items: center;
+	padding-top: 9vh;
 }
-.subnest{
-	display:grid;
+.subNest{
+	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column: 1/4;
-	align-self: end;
-	justify-self: center;
-	height: 45vh;
-	padding-top: 5vh;
+}
+.subNestImg {
+	grid-column: 2/3;
 }
 	/* Now for contact chapter */
 .contact{
@@ -217,13 +198,14 @@ body{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 	/* Now the contact's own nest */
-.contact-nest{
+.contactNest{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.contact-details{
+.contactDetails{
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	height: 9vh;
 }
 .linePhone{
 	grid-column: 1/3;
@@ -254,62 +236,20 @@ body{
 	height: 8vh;
 	margin-top: 4vh;
 }
-.postItImage {
-	padding-top: 1vh;
-}
 
 
-		/* Now to put in the zoom while mouse hover */
+
+
+
+		/* Now the styles for the images */
 	/* First the zoom tool for general images */
-.zoomA {
-	transition: transform .2s;
-	grid-column: 2/3;
-	height: 25vh;
-	width: 40vh;
-}
-.zoomA0 {
-	transition: transform .2s;
-	padding-right: 10vh;
-}
-.zoomA0 > a > img {
-	height: 25vh;
-	width: 40vh;
-}
-.zoomA1 {
-	transition: transform .2s;
-	grid-column: 1/2;
-	height: 25vh;
-	width: 40vh;
-	padding-top: 5vh;
-
-}
-.zoomA2 {
-	transition: transform .2s;
-	grid-column: 2/3;
-  	height: 25vh;
-	width: 40vh;
-	padding-top: 5vh;
-
-}
-
-	/* Now a special one for the images in content-left, to avoid going out of the window */
-.zoomC {
+.imageEffect {
 	transition: transform .2s;
 	padding: 2vh;
-	padding-top: 5vh;
-}
-.zoomB {
-	transition: transform .2s;
-	padding-top: 25vh;
-}
-.noZoom {
-	transition: transform .2s;
-	padding: 2vh;
-	padding-top: 12vh;
+	width: 100%;
 }
 
-
-		/* Now to style the scroll progress bar before 'wrap0' */
+		/* Now to style the scroll progress bar before 'wrapper' */
 	/* First the background bar (black one) */
 .progressContainer{
   position: fixed;
@@ -317,7 +257,7 @@ body{
   left: 0;
   width: 100%;
   height: 1vh;
-  background: #000;
+  background: rgb(0, 0, 0);
   z-index: 100;
 }
 	/* Then we can add the progress bar on top  of the background one */
@@ -331,8 +271,9 @@ body{
 
 
 		/* Here are the styles for the images that appear with the scrolling */
-	/* For the photos */
-.inline-photo {
+
+		/* For the photos */
+.inlinePhoto {
   box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
   opacity: 0;
   transform: translateY(4em);
@@ -342,18 +283,16 @@ body{
   will-change: transform, opacity;
 }
 	/* Now once the images are visible */
-.inline-photo.is-visible {
+.inlinePhoto.is-visible {
   opacity: 1;
   transform: rotateZ(0deg);
 }
-.codeImg{
-	width: 80%;
-	padding: 2vh;
-}
+
 
 
 
 		/* Now to style the buttons */
+
 	/* First the scroll to top button */
 #scrollToTopButton {
   height: 5vh;
@@ -371,7 +310,7 @@ body{
 	height: 4vh;
 }
 	/* Now the next and previous buttons */
-.nextButton{
+#nextChapter{
 	height: 3vh;
 	width: 6vh;
 	border-radius: 2vh;
@@ -382,7 +321,7 @@ body{
 	left: 3vh;
 	z-index: 100;
 }
-.prevButton{
+#prevChapter{
 	height: 3vh;
 	width: 6vh;
 	border-radius: 2vh;
@@ -394,21 +333,11 @@ body{
 	z-index: 100;
 	display: none;
 }
-	/* Finally the copy buttons */
-.copyButton{
-	border: none;
-	cursor: pointer;
-	background-color: black;
-}
-.copyButton > img {
-	height: 4vh;
-}
 
+/* Can maybe be deleted */
 #firstLink{
 	color:white;
 }
-
-
 	/* End of the buttons styling */
 
 
