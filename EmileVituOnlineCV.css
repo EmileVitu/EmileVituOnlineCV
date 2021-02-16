@@ -63,17 +63,16 @@ h4{
 
 		/* First the general layout */
 html{
-	/*cursor: url('Public/cursor.gif'), auto; */
-		/* This one is for the fading effect */
-	/*box-sizing: border-box;*/
 	scroll-behavior: smooth;
-
+	background-image: url('public/pexels-tirachard-kumtanom-450055.jpg');
+	z-index: -2;
 }
 	/* Then the body features for the whole page */
 body{
 	color: white;
 	font-weight: 400;
 	position: absolute;
+	background: transparent;
 }
 	/* Now the styles for the general grid */
 .wrap0{
@@ -81,7 +80,7 @@ body{
 	grid-template-columns: 1fr 1fr 1fr;
 	padding-left: 20vh;
 	padding-right: 20vh;
-	background: black;
+	background: transparent;
 }
 
 
