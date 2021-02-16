@@ -54,10 +54,6 @@ li{
 	font-size: 2vh;
 	padding: 2vh;
 } 
-h4{
-	font-size: 4vh;
-}
-
 
 
 		/* First the general layout */
@@ -141,6 +137,8 @@ body{
 .contentLeftFull{
 	height: 100vh;
 	grid-column: 1/3;
+	display: flex;
+	align-items: center;
 }
 .text{
 	padding-top: 23vh;
@@ -149,17 +147,15 @@ body{
 }
 .contentRightFull{
 	height: 100vh;
-	grid-column: 1/2;
+	grid-column: 1/3;
+	display: flex;
+	align-items: center;
 }
 .contentLeftEnd{
-	height: 66vh;
+	height: 43vh;
 }
-.contentLeftEnd > img {
-	padding-top: 3vh;
-	height: 49vh;
-}
-.contentLeftEnd2{
-	height: 66vh;
+.textLeftEnd{
+	height: 43vh;
 	grid-column: 2/4;
 }
 	/* Now the styles for the three nested grids */
@@ -183,62 +179,29 @@ body{
 	align-self: start;
 	width: 50%;
 }
-
-	/* Now for contact chapter */
-.contact{
-	grid-column: 1/4;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-	/* Now the contact's own nest */
-.contactNest{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-.contactDetails{
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-	height: 9vh;
-}
-.linePhone{
-	grid-column: 1/3;
-	height: 7vh;
-}
-.lineEmail{
-	grid-column: 1/3;
-	height: 7vh;
-}
-.logo1{
-	grid-column: 1/2;
-}
-.logo1 > a >img{
-	height: 8vh;
-	margin-top: 4vh;
-}
-.logo2{
+	/* Now the contact subchapter */
+.contactLogos{
 	grid-column: 3/4;
+	align-items: center;
 }
-.logo2 > a >img{
-	height: 8vh;
-	margin-top: 4vh;
+.contactLogos > a >img{
+	height: 12vh;
 }
-.logo3{
-	grid-column: 5/6;
+.eMail {
+	align-self: center;
+	justify-self: end;
+	padding-right: 2vh;
 }
-.logo3 > a >img{
-	height: 8vh;
-	margin-top: 4vh;
+.lastEmptyDiv {
+	height: 35vh;
 }
 
 
 
-
-
-		/* Now the styles for the images */
-	/* First the zoom tool for general images */
 
 
 		/* Now to style the scroll progress bar before 'wrapper' */
+
 	/* First the background bar (black one) */
 .progressContainer{
  	position: fixed;
@@ -259,9 +222,11 @@ body{
 
 
 
-		/* Here are the styles for the images that appear with the scrolling */
 
-		/* For the photos */
+
+		/* Now the styles for the images */
+
+	/* For the photos */
 img {
 	padding: 2vh;
 }
@@ -325,6 +290,7 @@ img {
 	display: none;
 }
 
+/* !!!!!!!!!!!!!!!!!!!! */
 /* Can maybe be deleted */
 #firstLink{
 	color:white;
