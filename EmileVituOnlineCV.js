@@ -1,11 +1,6 @@
 /* Here starts the JavaScript code for EmileVituOnlineCV */
 
-		/* First the scroll function to navigate through chapters */
 
-
-/* Johnny's advice
-document.getElementsByClassName("chapter")[currentChapter].scrollIntoView();
-In order to avoid usind window.innerHeight*/
 
 
 
@@ -146,11 +141,11 @@ window.onload = function(){
 		elementsToShow.forEach(function (element){
 		/* With the loop we check if they are in the viewport */
 			if (isElementInViewport(element)) {
-				element.classList.add('is-visible');
+				element.classList.add('isVisible');
 			}
-		/* If they are we can add to them the class 'is-visible' and if ot we remove them */
+		/* If they are we can add to them the class 'isVisible' and if ot we remove them */
 			else {
-				element.classList.remove('is-visible');
+				element.classList.remove('isVisible');
 			}
 		});
 		scroll(loop);

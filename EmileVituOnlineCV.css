@@ -5,59 +5,63 @@
 
 
 		/* Now the font styles */
-		
+
 	/* This is to import my special font */
 @font-face {
-	font-family: helvetNeueBold;
-	src: url(public/HelveticaNeueBold.ttf);
+	font-family: arkHip;
+	src: url(public/Arkhip_font.otf);
 }
 @font-face {
-	font-family: montserratBold;
-	src: url(public/montserratBold.ttf);
+	font-family: creativeTypeBold;
+	src: url(public/CreativeType-Bold.otf);
 }
-@font-face {
-	font-family: ohio;
-	src: url(public/Ohio.ttf);
-}
+
+
+
+
 	/* For the main title of the page */
 h1{
-	font-family: "montserratBold", helvetica;
-	font-size: 25vh;
+	font-family: "creativeTypeBold";
+	font-size: 10vw;
 }
 	/* For titles */
 h2{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 10vh;
+	font-family: "creativeTypeBold";
+	font-size: 5vw;
 }
 	/* For subtitles */
 h3{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 7vh;
+	font-family: "creativeTypeBold";
+	font-size: 3vw;
 }
 h4{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 5vh;
+	font-family: "creativeTypeBold";
+	font-size: 2.5vw;
+	padding-top: 2vh;
 }
+
+
+/*  !!!!!! Must try to change with */
 h5{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 3vh;
+	font-family: "creativeTypeBold";
+	font-size: 2vw;
+	padding-top: 1.7vh;
+}
+h6{
+	font-family: "arkHip";
+	font-size: 1.7vw;
 }
 	/* For plain text */
 p{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 2vh;
-	padding-top: 2vh;
-}
-ul{
-	list-style-image: url('public/bullet-point.jpg');
-	font-family: "helvetNeueBold", helvetica;
+	font-family: "arkHip";
+	padding-top: 1vh;
+	font-size: 1.2vw;
 }
 li{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 2vh;
-	padding: 2vh;
-} 
-
+	font-family: "arkHip";
+	font-size: 1.5vw;
+	padding: 1vh;
+}
 
 
 
@@ -76,85 +80,52 @@ body{
 	background: transparent;
 }
 	/* Now the styles for the general grid */
-.wrapper{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding-left: 20vh;
-	padding-right: 20vh;
-	background: transparent;
-}
+
 
 
 
 
 
 		/* Now the styles for the different classes of the grid elements */
-
-	/* First the empty div for the empty slides */
+.wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-left: 20vh;
+	padding-right: 20vh;
+}
+	/* First the empty divs for the empty slides and areas */
 .emptyDiv{
 	grid-column: 1/4;
 	height: 100vh;
+}
+.banner{
+	grid-column: 1/4;
+	height: 25vh;
 }
 	/* Now the regular container divs for the slides */
 .introDiv{
 	grid-column: 1/4;
 	text-align: left;
-	height: 100vh;
+	height: 50vh;
 }
-	/* The classes for the titles */
-.titleLeft{
-	grid-column: 1/4;
-	height: 20vh;
-}
-.titleRight{
-	grid-column: 3/4;
+.introText{
+	grid-column: 1/2;
 	text-align: left;
-	height: 10vh;
-	padding-left: 1vh;
-}
-	/* The classes for the subtitles */
-.subtitleLeft{
-	grid-column: 1/4;
-	text-align: left;
-	height: 10vh;
+	height: 50vh;
 }
 	/* The classes for the content */
-.contentLeft{
-	height: 70vh;
-	padding-top: 13vh;
-}
-.contentRight{
-	height: 90vh;
-	padding-top: 10vh;
-}
-.websiteLeft{
-	grid-column: 1/2;
-	height: 80vh;
-}
-.websiteRight{
-	grid-column: 2/4;
-	height: 70vh;
-}
 .contentLeftFull{
-	height: 100vh;
+	height: 75vh;
 	grid-column: 1/3;
-	display: flex;
-	align-items: center;
 }
 .contentRightFull{
-	height: 100vh;
+	height: 75vh;
 	grid-column: 2/4;
-	display: flex;
-	align-items: center;
 }
 .textLeftFull{
 	grid-column: 1/2;
-	display: flex;
-	align-items: center;
 }
 .textRightFull{
-	padding-top: 23vh;
-	padding-left: 4vh;
 	grid-column: 3/4;
 }
 	/* Now the styles for the three nested grids */
@@ -162,51 +133,47 @@ body{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column: 2/4;
-	height: 70vh;
-	padding-top: 14vh;
+	height: 75vh;
 }
 .contentRightNested{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column: 1/3;
-	align-items: end;
-	height: 90vh;
+	height: 75vh;
 }
 .subNest{
 	grid-column: 1/3;
-	justify-self: center;
 	align-self: start;
+	justify-self: center;
 	width: 50%;
 }
 	/* Now the contact subchapter */
 .contentLeftEnd{
-	height: 48vh;
+	height: 50vh;
 }
 .textLeftEnd{
-	height: 48vh;
+	height: 50vh;
 	grid-column: 2/4;
+	padding-top: 2vh;
 }
 .contactLogos{
 	grid-column: 3/4;
 	align-items: center;
 }
+.eMail {
+	justify-self: end;
+	padding-right: 2vh;
+	padding-top: 3.5vh;
+	height: 25vh;
+}
 .contactLogos > a >img{
 	height: 12vh;
 }
-.eMail {
-	align-self: center;
-	justify-self: end;
-	padding-right: 2vh;
-}
-.lastEmptyDiv {
-	height: 29vh;
-}
 
 
 
 
-
-		/* Now the styles for the images */
+		/* Here are the styles for the images */
 
 	/* For the photos */
 img {
@@ -220,8 +187,8 @@ img {
   	width: 100%;
   	will-change: transform, opacity;
 }
-	/* Now once the images are visible */
-.inlinePhoto.is-visible {
+	/* For the effects */
+.inlinePhoto.isVisible {
   	opacity: 1;
   	transform: rotateZ(0deg);
 }
@@ -231,7 +198,11 @@ img {
 
 		/* Now to style the buttons */
 
-	/* First the scroll to top button */
+	/* First the general button attributes */
+button > img {
+	padding: 0vh;
+}
+	/* Then the scroll to top button */
 #scrollToTopButton {
   	height: 5vh;
   	width: 6vh;
@@ -243,9 +214,6 @@ img {
   	bottom: 3vh;
   	right: 3vh;
   	z-index: 100;
-}
-#scrollToTopButton > img {
-	height: 4vh;
 }
 	/* Now the next and previous buttons */
 #nextChapter{
