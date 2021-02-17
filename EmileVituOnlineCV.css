@@ -57,10 +57,6 @@ p{
 	padding-top: 1vh;
 	font-size: 1.2vw;
 }
-ul{
-	list-style-image: url('public/bulletPoint.png');
-	font-family: "arkHip";
-}
 li{
 	font-family: "arkHip";
 	font-size: 1.5vw;
@@ -109,6 +105,11 @@ body{
 	/* Now the regular container divs for the slides */
 .introDiv{
 	grid-column: 1/4;
+	text-align: left;
+	height: 50vh;
+}
+.introText{
+	grid-column: 1/2;
 	text-align: left;
 	height: 50vh;
 }
