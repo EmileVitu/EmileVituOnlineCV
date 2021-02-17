@@ -110,7 +110,7 @@ body{
 .introDiv{
 	grid-column: 1/4;
 	text-align: left;
-	height: 100vh;
+	height: 50vh;
 }
 	/* The classes for the content */
 .contentLeftFull{
@@ -153,13 +153,11 @@ body{
 .textLeftEnd{
 	height: 50vh;
 	grid-column: 2/4;
+	padding-top: 2vh;
 }
 .contactLogos{
 	grid-column: 3/4;
 	align-items: center;
-}
-.contactLogos > a >img{
-	height: 12vh;
 }
 .eMail {
 	justify-self: end;
@@ -167,7 +165,9 @@ body{
 	padding-top: 3.5vh;
 	height: 25vh;
 }
-
+.contactLogos > a >img{
+	height: 12vh;
+}
 
 
 
