@@ -2,7 +2,10 @@
 
 
 
+
+
 		/* Now the font styles */
+		
 	/* This is to import my special font */
 @font-face {
 	font-family: helvetNeueBold;
@@ -56,6 +59,9 @@ li{
 } 
 
 
+
+
+
 		/* First the general layout */
 html{
 	scroll-behavior: smooth;
@@ -64,10 +70,8 @@ html{
 }
 	/* Then the body features for the whole page */
 body{
-/* This part is for the general text styles */
 	color: white;
-	font-weight: 400;
-/* These are for the rest */
+	font-weight: 300;
 	position: absolute;
 	background: transparent;
 }
@@ -79,6 +83,8 @@ body{
 	padding-right: 20vh;
 	background: transparent;
 }
+
+
 
 
 
@@ -106,11 +112,6 @@ body{
 	height: 10vh;
 	padding-left: 1vh;
 }
-.title-right2{
-	grid-column: 2/4; 
-	text-align: left;
-	height: 20vh;
-}
 	/* The classes for the subtitles */
 .subtitleLeft{
 	grid-column: 1/4;
@@ -118,7 +119,7 @@ body{
 	height: 10vh;
 }
 	/* The classes for the content */
-.subContentLeft{
+.contentLeft{
 	height: 70vh;
 	padding-top: 13vh;
 }
@@ -140,23 +141,21 @@ body{
 	display: flex;
 	align-items: center;
 }
-.text{
-	padding-top: 23vh;
-	padding-left: 4vh;
-	grid-column: 3/4;
-}
 .contentRightFull{
 	height: 100vh;
-	grid-column: 1/3;
+	grid-column: 2/4;
 	display: flex;
 	align-items: center;
 }
-.contentLeftEnd{
-	height: 43vh;
+.textLeftFull{
+	grid-column: 1/2;
+	display: flex;
+	align-items: center;
 }
-.textLeftEnd{
-	height: 43vh;
-	grid-column: 2/4;
+.textRightFull{
+	padding-top: 23vh;
+	padding-left: 4vh;
+	grid-column: 3/4;
 }
 	/* Now the styles for the three nested grids */
 .contentLeftNested{
@@ -180,6 +179,13 @@ body{
 	width: 50%;
 }
 	/* Now the contact subchapter */
+.contentLeftEnd{
+	height: 48vh;
+}
+.textLeftEnd{
+	height: 48vh;
+	grid-column: 2/4;
+}
 .contactLogos{
 	grid-column: 3/4;
 	align-items: center;
@@ -193,31 +199,7 @@ body{
 	padding-right: 2vh;
 }
 .lastEmptyDiv {
-	height: 35vh;
-}
-
-
-
-
-
-		/* Now to style the scroll progress bar before 'wrapper' */
-
-	/* First the background bar (black one) */
-.progressContainer{
- 	position: fixed;
-	top: 0;
- 	left: 0;
- 	width: 100%;
-  	height: 1vh;
- 	background: rgb(0, 0, 0);
-  	z-index: 100;
-}
-	/* Then we can add the progress bar on top  of the background one */
-.progress{
-	height: 1vh;
-  	background: #999;
-  	width: 0;
-  	transition: width 0.5s;
+	height: 29vh;
 }
 
 
@@ -290,12 +272,42 @@ img {
 	display: none;
 }
 
+
+
+
+
+	/* Now to style the scroll progress bar before 'wrapper' */
+
+/* First the background bar (black one) */
+.progressContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+		height: 1vh;
+	background: rgb(0, 0, 0);
+		z-index: 100;
+}
+	/* Then we can add the progress bar on top  of the background one */
+.progress{
+	height: 1vh;
+		background: #999;
+		width: 0;
+		transition: width 0.5s;
+}
+
+
+
+
+
+
+
 /* !!!!!!!!!!!!!!!!!!!! */
 /* Can maybe be deleted */
 #firstLink{
-	color:white;
+color:white;
 }
-	/* End of the buttons styling */
+/* End of the buttons styling */
 
 
 
