@@ -8,57 +8,63 @@
 
 	/* This is to import my special font */
 @font-face {
-	font-family: helvetNeueBold;
-	src: url(public/HelveticaNeueBold.ttf);
+	font-family: arkHip;
+	src: url(public/Arkhip_font.otf);
 }
 @font-face {
-	font-family: montserratBold;
-	src: url(public/montserratBold.ttf);
+	font-family: creativeTypeBold;
+	src: url(public/CreativeType-Bold.otf);
 }
-@font-face {
-	font-family: ohio;
-	src: url(public/Ohio.ttf);
-}
+
+
 
 
 	/* For the main title of the page */
 h1{
-	font-family: "montserratBold", helvetica;
-	font-size: 20vh;
+	font-family: "creativeTypeBold";
+	font-size: 10vw;
 }
 	/* For titles */
 h2{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 10vh;
+	font-family: "creativeTypeBold";
+	font-size: 5vw;
 }
 	/* For subtitles */
 h3{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 7vh;
+	font-family: "creativeTypeBold";
+	font-size: 3vw;
 }
 h4{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 5vh;
+	font-family: "creativeTypeBold";
+	font-size: 2.5vw;
+	padding-top: 2vh;
 }
+
+
+/*  !!!!!! Must try to change with */
 h5{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 3vh;
+	font-family: "creativeTypeBold";
+	font-size: 2vw;
+	padding-top: 1.7vh;
+}
+h6{
+	font-family: "arkHip";
+	font-size: 1.7vw;
 }
 	/* For plain text */
 p{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 2vh;
-	padding-top: 2vh;
+	font-family: "arkHip";
+	padding-top: 1vh;
+	font-size: 1.2vw;
 }
 ul{
 	list-style-image: url('public/bulletPoint.png');
-	font-family: "helvetNeueBold", helvetica;
+	font-family: "arkHip";
 }
 li{
-	font-family: "helvetNeueBold", helvetica;
-	font-size: 3vh;
+	font-family: "arkHip";
+	font-size: 1.5vw;
 	padding: 1vh;
-	vertical-align: center;
 }
 
 
@@ -78,19 +84,19 @@ body{
 	background: transparent;
 }
 	/* Now the styles for the general grid */
-.wrapper{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	padding-left: 20vh;
-	padding-right: 20vh;
-}
+
 
 
 
 
 
 		/* Now the styles for the different classes of the grid elements */
-
+.wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-left: 20vh;
+	padding-right: 20vh;
+}
 	/* First the empty divs for the empty slides and areas */
 .emptyDiv{
 	grid-column: 1/4;
@@ -142,10 +148,10 @@ body{
 }
 	/* Now the contact subchapter */
 .contentLeftEnd{
-	height: 48vh;
+	height: 50vh;
 }
 .textLeftEnd{
-	height: 48vh;
+	height: 50vh;
 	grid-column: 2/4;
 }
 .contactLogos{
@@ -156,12 +162,10 @@ body{
 	height: 12vh;
 }
 .eMail {
-	align-self: center;
 	justify-self: end;
 	padding-right: 2vh;
-}
-.contactEmptyDiv {
-	height: 11vh;
+	padding-top: 3.5vh;
+	height: 25vh;
 }
 
 
