@@ -149,6 +149,7 @@ body{
 }
 	/* Now the contact subchapter */
 .contentLeftEnd{
+	grid-column: 1/2;
 	height: 50vh;
 }
 .textLeftEnd{
@@ -157,7 +158,7 @@ body{
 	padding-top: 2vh;
 }
 .contactLogos{
-	grid-column: 3/4;
+	grid-column: 2/4;
 	align-items: center;
 }
 .eMail {
@@ -368,9 +369,8 @@ color:white;
 	}
 		/* First the empty divs for the empty slides and areas */
 	.emptyDiv{
-		display: none;
 		grid-column: 1/4;
-		height: 100vh;
+		height: 50vh;
 	}
 	.banner{
 		grid-column: 1/4;
@@ -425,10 +425,10 @@ color:white;
 		align-items: center;
 	}
 	.eMail {
-		justify-self: end;
+		justify-self: start;
 		padding-right: 2vh;
-		padding-top: 3.5vh;
-		height: 40vh;
+		padding-top: 35vh;
+		height: 20vh;
 	}
 	.contactLogos > a >img{
 		height: 12vh;
@@ -447,11 +447,11 @@ color:white;
 		/* For subtitles */
 	h3{
 		font-family: "creativeTypeBold";
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 	h4{
 		font-family: "creativeTypeBold";
-		font-size: 2.5vw;
+		font-size: 3vw;
 		padding-top: 2vh;
 	}
 	
@@ -459,7 +459,7 @@ color:white;
 	/*  !!!!!! Must try to change with */
 	h5{
 		font-family: "creativeTypeBold";
-		font-size: 2vw;
+		font-size: 2.5vw;
 		padding-top: 1.7vh;
 	}
 	h6{
