@@ -368,6 +368,7 @@ color:white;
 	}
 		/* First the empty divs for the empty slides and areas */
 	.emptyDiv{
+		display: none;
 		grid-column: 1/4;
 		height: 100vh;
 	}
@@ -530,7 +531,7 @@ color:white;
 		position: fixed;
 		bottom: 3vh;
 		left: 3vh;
-		z-index: 100;
+		z-index: -3;
 	}
 	#prevChapter{
 		height: 3vh;
@@ -542,7 +543,7 @@ color:white;
 		bottom: 3vh;
 		left: 11vh;
 		z-index: 100;
-		display: none;
+		display: -3;
 	}	/* Here must put in lines the containers */
 }
 
