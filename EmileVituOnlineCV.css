@@ -19,6 +19,7 @@
 
 
 
+
 	/* For the main title of the page */
 h1{
 	font-family: "creativeTypeBold";
@@ -147,6 +148,14 @@ body{
 	justify-self: center;
 	width: 50%;
 }
+.lastLeftFull {
+	grid-column: 1/2;
+	height: 75vh;
+}
+.lastRightFull {
+	grid-column: 2/4;
+	height: 75vh;
+}
 	/* Now the contact subchapter */
 .contentLeftEnd{
 	height: 50vh;
@@ -159,19 +168,12 @@ body{
 .lastGrid {
 	display: grid;
 	grid-column: 1/4;
-	grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
 	height: 25vh;
+	align-items: center;
+	justify-items: center;
 }
 .contactLogos{
-	grid-column: 2/4;
-	align-items: center;
-}
-.eMail {
-	grid-column: 1/2;
-	justify-self: end;
-	padding-right: 2vh;
-	padding-top: 3.5vh;
-	height: 25vh;
+	grid-column: 1/4;
 }
 .contactLogos > a >img{
 	height: 12vh;
@@ -268,19 +270,10 @@ button > img {
 		width: 0;
 		transition: width 0.5s;
 }
-
-
-
-
-
-
-
-/* !!!!!!!!!!!!!!!!!!!! */
-/* Can maybe be deleted */
 #firstLink{
 color:white;
 }
-/* End of the buttons styling */
+/* End of the general styling */
 
 
 
@@ -308,57 +301,16 @@ color:white;
 	.eMail {
 		height: 30vh;
 	}
-	
-	
-	
-	
-		/* First the general button attributes */
-	button > img {
-		padding: 0vh;
+	.lastLeftFull {
+		height: 80vh;
 	}
-		/* Then the scroll to top button */
-	#scrollToTopButton {
-			height: 5vh;
-			width: 6vh;
-			display: none;
-			position: fixed;
-			background-color: black;
-			cursor: pointer;
-			border-radius: 2vh;
-			bottom: 3vh;
-			right: 3vh;
-			z-index: 100;
-	}
-		/* Now the next and previous buttons */
-	#nextChapter{
-		height: 3vh;
-		width: 6vh;
-		border-radius: 2vh;
-		cursor: pointer;
-		background-color: black;
-		position: fixed;
-		bottom: 3vh;
-		left: 3vh;
-		z-index: 100;
-	}
-	#prevChapter{
-		height: 3vh;
-		width: 6vh;
-		border-radius: 2vh;
-		cursor: pointer;
-		background-color: black;
-		position: fixed;
-		bottom: 3vh;
-		left: 11vh;
-		z-index: 100;
-		display: none;
-	}
-		
+	.lastRightFull {
+		height: 80vh;
+	}	
 }
 
 
 @media only screen and (max-width: 750px) {
-	/* Now the styles for the different classes of the grid elements */
 	.wrapper{
 		padding-left: 5vh;
 		padding-right: 5vh;
@@ -366,21 +318,18 @@ color:white;
 }
 
 @media only screen and (max-width: 500px) {
-	/* Now the styles for the different classes of the grid elements */
 	.wrapper{
 		padding-left: 2vh;
 		padding-right: 2vh;
 	}
-		/* First the empty divs for the empty slides and areas */
 	.emptyDiv{
 		grid-column: 1/4;
 		height: 50vh;
 	}
 	.banner{
 		grid-column: 1/4;
-		height: 20vh;
+		height: 10vh;
 	}
-		/* Now the regular container divs for the slides */
 	.introDiv{
 		grid-column: 1/4;
 		height: 40vh;
@@ -389,9 +338,9 @@ color:white;
 		grid-column: 1/3;
 		height: 60vh;
 	}
-		/* The classes for the content */
 	.contentLeftFull{
-		height: 50vh;
+		height: 60vh;
+		padding-top: 30vh;
 		grid-column: 1/4;
 	}
 	.contentRightFull{
@@ -399,156 +348,71 @@ color:white;
 		grid-column: 1/4;
 	}
 	.textLeftFull{
-		height: 30vh;
+		height: 40vh;
 		grid-column: 1/4;
 	}
 	.textRightFull{
-		height: 30vh;
+		height: 40vh;
 		grid-column: 1/4;
 	}
-		/* Now the styles for the three nested grids */
 	.contentLeftNested{
 		grid-column: 1/4;
-		height: 50vh;
+		height: 60vh;
 	}
 	.contentRightNested{
 		grid-column: 1/4;
-		height: 50vh;
+		height: 60vh;
 	}
-		/* Now the contact subchapter */
 	.contentLeftEnd{
-		height: 40vh;
+		height: 65vh;
+		padding-top: 2vh;
 	}
 	.textLeftEnd{
-		height: 40vh;
+		height: 65vh;
+	}
+	.lastGrid {
+		display: grid;
 		grid-column: 1/4;
-		padding-top: 2vh;
+		height: 25vh;
+		align-items: end;
+		justify-items: center;
 	}
 	.contactLogos{
 		grid-column: 1/4;
-		align-items: center;
-	}
-	.eMail {
-		justify-self: start;
-		padding-right: 2vh;
-		padding-top: 35vh;
-		height: 20vh;
 	}
 	.contactLogos > a >img{
 		height: 12vh;
 	}
-	
-	/* For the main title of the page */
-	h1{
-		font-family: "creativeTypeBold";
-		font-size: 10vw;
-	}
-		/* For titles */
+		/* Now to enlarge the text */
 	h2{
-		font-family: "creativeTypeBold";
 		font-size: 5vw;
 	}
-		/* For subtitles */
 	h3{
-		font-family: "creativeTypeBold";
 		font-size: 4vw;
 	}
 	h4{
-		font-family: "creativeTypeBold";
 		font-size: 3vw;
-		padding-top: 2vh;
 	}
-	
-	
-	/*  !!!!!! Must try to change with */
 	h5{
-		font-family: "creativeTypeBold";
-		font-size: 2.5vw;
-		padding-top: 1.7vh;
+		font-size: 3vw;
 	}
 	h6{
-		font-family: "arkHip";
-		font-size: 1.7vw;
+		font-size: 3vw;
 	}
-		/* For plain text */
 	p{
-		font-family: "arkHip";
-		padding-top: 1vh;
 		font-size: 3vw;
 	}
 	li{
-		font-family: "arkHip";
 		font-size: 3vw;
-		padding: 1vh;
-	}	
-	
-	
-			/* Here are the styles for the images */
-	
-		/* For the photos */
+	}		
+		/* To enlarge slightly the images */
 	img {
-		padding: 2vh;
+		padding: 1vh;
 	}
-	.inlinePhoto {
-		  opacity: 0;
-		  transform: translateY(4em);
-		  transition: transform 2s .25s cubic-bezier(0,1,.3,1),
-				  opacity .3s .25s ease-out;
-		  width: 100%;
-		  will-change: transform, opacity;
+		/* Now to remove the buttons */
+	button {
+		opacity: 0;
 	}
-		/* For the effects */
-	.inlinePhoto.isVisible {
-		  opacity: 1;
-		  transform: rotateZ(0deg);
-	}
-	
-	
-	
-	
-			/* Now to style the buttons */
-	
-		/* First the general button attributes */
-	button > img {
-		padding: 0vh;
-	}
-		/* Then the scroll to top button */
-	#scrollToTopButton {
-		  height: 5vh;
-		  width: 6vh;
-		  display: none;
-		  position: fixed;
-		  background-color: black;
-		  cursor: pointer;
-		  border-radius: 2vh;
-		  bottom: 3vh;
-		  right: 3vh;
-		  z-index: 100;
-	}
-		/* Now the next and previous buttons */
-	#nextChapter{
-		height: 3vh;
-		width: 6vh;
-		border-radius: 2vh;
-		cursor: pointer;
-		background-color: black;
-		position: fixed;
-		bottom: 3vh;
-		left: 3vh;
-		z-index: -3;
-	}
-	#prevChapter{
-		height: 3vh;
-		width: 6vh;
-		border-radius: 2vh;
-		cursor: pointer;
-		background-color: black;
-		position: fixed;
-		bottom: 3vh;
-		left: 11vh;
-		z-index: 100;
-		display: -3;
-	}	/* Here must put in lines the containers */
 }
 
 
