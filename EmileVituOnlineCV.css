@@ -89,7 +89,7 @@ body{
 		/* Now the styles for the different classes of the grid elements */
 .wrapper{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
 	padding-left: 20vh;
 	padding-right: 20vh;
 }
@@ -139,7 +139,7 @@ body{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column: 1/3;
-	height: 75vh;
+	height: 100vh;
 }
 .subNest{
 	grid-column: 1/3;
@@ -280,8 +280,271 @@ color:white;
 
 
 
+@media only screen and (max-width: 1000px) {
+	.wrapper{
+		padding-left: 10vh;
+		padding-right: 10vh;
+	}
+	.banner{
+		height: 20vh;
+	}
+	.contentLeftFull{
+		height: 80vh;
+	}
+	.contentRightFull{
+		height: 80vh;
+	}
+	.contentLeftNested{
+		height: 80vh;
+	}
+	.contentRightNested{
+		height: 80vh;
+	}
+	.eMail {
+		height: 30vh;
+	}
+	
+	
+	
+	
+		/* First the general button attributes */
+	button > img {
+		padding: 0vh;
+	}
+		/* Then the scroll to top button */
+	#scrollToTopButton {
+			height: 5vh;
+			width: 6vh;
+			display: none;
+			position: fixed;
+			background-color: black;
+			cursor: pointer;
+			border-radius: 2vh;
+			bottom: 3vh;
+			right: 3vh;
+			z-index: 100;
+	}
+		/* Now the next and previous buttons */
+	#nextChapter{
+		height: 3vh;
+		width: 6vh;
+		border-radius: 2vh;
+		cursor: pointer;
+		background-color: black;
+		position: fixed;
+		bottom: 3vh;
+		left: 3vh;
+		z-index: 100;
+	}
+	#prevChapter{
+		height: 3vh;
+		width: 6vh;
+		border-radius: 2vh;
+		cursor: pointer;
+		background-color: black;
+		position: fixed;
+		bottom: 3vh;
+		left: 11vh;
+		z-index: 100;
+		display: none;
+	}
+		
+}
 
 
+@media only screen and (max-width: 750px) {
+	/* Now the styles for the different classes of the grid elements */
+	.wrapper{
+		padding-left: 5vh;
+		padding-right: 5vh;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	/* Now the styles for the different classes of the grid elements */
+	.wrapper{
+		padding-left: 2vh;
+		padding-right: 2vh;
+	}
+		/* First the empty divs for the empty slides and areas */
+	.emptyDiv{
+		grid-column: 1/4;
+		height: 100vh;
+	}
+	.banner{
+		grid-column: 1/4;
+		height: 20vh;
+	}
+		/* Now the regular container divs for the slides */
+	.introDiv{
+		grid-column: 1/4;
+		height: 40vh;
+	}
+	.introText{
+		grid-column: 1/3;
+		height: 60vh;
+	}
+		/* The classes for the content */
+	.contentLeftFull{
+		height: 50vh;
+		grid-column: 1/4;
+	}
+	.contentRightFull{
+		height: 50vh;
+		grid-column: 1/4;
+	}
+	.textLeftFull{
+		height: 30vh;
+		grid-column: 1/4;
+	}
+	.textRightFull{
+		height: 30vh;
+		grid-column: 1/4;
+	}
+		/* Now the styles for the three nested grids */
+	.contentLeftNested{
+		grid-column: 1/4;
+		height: 50vh;
+	}
+	.contentRightNested{
+		grid-column: 1/4;
+		height: 50vh;
+	}
+		/* Now the contact subchapter */
+	.contentLeftEnd{
+		height: 40vh;
+	}
+	.textLeftEnd{
+		height: 40vh;
+		grid-column: 1/4;
+		padding-top: 2vh;
+	}
+	.contactLogos{
+		grid-column: 1/4;
+		align-items: center;
+	}
+	.eMail {
+		justify-self: end;
+		padding-right: 2vh;
+		padding-top: 3.5vh;
+		height: 40vh;
+	}
+	.contactLogos > a >img{
+		height: 12vh;
+	}
+	
+	/* For the main title of the page */
+	h1{
+		font-family: "creativeTypeBold";
+		font-size: 10vw;
+	}
+		/* For titles */
+	h2{
+		font-family: "creativeTypeBold";
+		font-size: 5vw;
+	}
+		/* For subtitles */
+	h3{
+		font-family: "creativeTypeBold";
+		font-size: 3vw;
+	}
+	h4{
+		font-family: "creativeTypeBold";
+		font-size: 2.5vw;
+		padding-top: 2vh;
+	}
+	
+	
+	/*  !!!!!! Must try to change with */
+	h5{
+		font-family: "creativeTypeBold";
+		font-size: 2vw;
+		padding-top: 1.7vh;
+	}
+	h6{
+		font-family: "arkHip";
+		font-size: 1.7vw;
+	}
+		/* For plain text */
+	p{
+		font-family: "arkHip";
+		padding-top: 1vh;
+		font-size: 3vw;
+	}
+	li{
+		font-family: "arkHip";
+		font-size: 3vw;
+		padding: 1vh;
+	}	
+	
+	
+			/* Here are the styles for the images */
+	
+		/* For the photos */
+	img {
+		padding: 2vh;
+	}
+	.inlinePhoto {
+		  opacity: 0;
+		  transform: translateY(4em);
+		  transition: transform 2s .25s cubic-bezier(0,1,.3,1),
+				  opacity .3s .25s ease-out;
+		  width: 100%;
+		  will-change: transform, opacity;
+	}
+		/* For the effects */
+	.inlinePhoto.isVisible {
+		  opacity: 1;
+		  transform: rotateZ(0deg);
+	}
+	
+	
+	
+	
+			/* Now to style the buttons */
+	
+		/* First the general button attributes */
+	button > img {
+		padding: 0vh;
+	}
+		/* Then the scroll to top button */
+	#scrollToTopButton {
+		  height: 5vh;
+		  width: 6vh;
+		  display: none;
+		  position: fixed;
+		  background-color: black;
+		  cursor: pointer;
+		  border-radius: 2vh;
+		  bottom: 3vh;
+		  right: 3vh;
+		  z-index: 100;
+	}
+		/* Now the next and previous buttons */
+	#nextChapter{
+		height: 3vh;
+		width: 6vh;
+		border-radius: 2vh;
+		cursor: pointer;
+		background-color: black;
+		position: fixed;
+		bottom: 3vh;
+		left: 3vh;
+		z-index: 100;
+	}
+	#prevChapter{
+		height: 3vh;
+		width: 6vh;
+		border-radius: 2vh;
+		cursor: pointer;
+		background-color: black;
+		position: fixed;
+		bottom: 3vh;
+		left: 11vh;
+		z-index: 100;
+		display: none;
+	}	/* Here must put in lines the containers */
+}
 
 
 
