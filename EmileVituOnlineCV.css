@@ -89,7 +89,7 @@ body{
 		/* Now the styles for the different classes of the grid elements */
 .wrapper{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+	grid-template-columns: 1fr 1fr 1fr;
 	padding-left: 20vh;
 	padding-right: 20vh;
 }
@@ -149,7 +149,6 @@ body{
 }
 	/* Now the contact subchapter */
 .contentLeftEnd{
-	grid-column: 1/2;
 	height: 50vh;
 }
 .textLeftEnd{
@@ -157,11 +156,18 @@ body{
 	grid-column: 2/4;
 	padding-top: 2vh;
 }
+.lastGrid {
+	display: grid;
+	grid-column: 1/4;
+	grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+	height: 25vh;
+}
 .contactLogos{
 	grid-column: 2/4;
 	align-items: center;
 }
 .eMail {
+	grid-column: 1/2;
 	justify-self: end;
 	padding-right: 2vh;
 	padding-top: 3.5vh;
@@ -170,8 +176,6 @@ body{
 .contactLogos > a >img{
 	height: 12vh;
 }
-
-
 
 
 		/* Here are the styles for the images */
@@ -299,7 +303,7 @@ color:white;
 		height: 80vh;
 	}
 	.contentRightNested{
-		height: 80vh;
+		height: 100vh;
 	}
 	.eMail {
 		height: 30vh;
