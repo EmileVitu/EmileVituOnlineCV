@@ -40,9 +40,6 @@ h4{
 	font-size: 2.5vw;
 	padding-top: 2vh;
 }
-
-
-/*  !!!!!! Must try to change with */
 h5{
 	font-family: "creativeTypeBold";
 	font-size: 2vw;
@@ -175,9 +172,12 @@ body{
 .contactLogos{
 	grid-column: 1/4;
 }
-.contactLogos > a >img{
+.contactLogos > a > img{
 	height: 12vh;
 }
+
+
+
 
 
 		/* Here are the styles for the images */
@@ -203,11 +203,14 @@ img {
 
 
 
+
 		/* Now to style the buttons */
 
 	/* First the general button attributes */
 button > img {
-	padding: 0vh;
+	padding: 0.2vh;
+	max-width: 100%;
+	max-height: 100%;
 }
 	/* Then the scroll to top button */
 #scrollToTopButton {
@@ -278,6 +281,16 @@ color:white;
 
 
 
+
+		/* Finally the media queries for resposiveness */
+
+	/* First of all a query for height issues */
+@media only screen and (max-height: 850px) {
+	button > img {
+		margin-bottom: 2vh;
+	}
+}
+	/* Then for width, first for mid screens */
 @media only screen and (max-width: 1000px) {
 	.wrapper{
 		padding-left: 10vh;
@@ -306,32 +319,36 @@ color:white;
 	}
 	.lastRightFull {
 		height: 80vh;
-	}	
+	}
+	button > img {
+		margin-bottom: 2vh;
+	}
 }
 
-
+	/* Then for small screens */
 @media only screen and (max-width: 750px) {
 	.wrapper{
 		padding-left: 5vh;
 		padding-right: 5vh;
 	}
+	button > img {
+		margin-bottom: 2vh;
+	}
 }
 
+	/* Finally for extra small screens */
 @media only screen and (max-width: 500px) {
 	.wrapper{
 		padding-left: 2vh;
 		padding-right: 2vh;
 	}
 	.emptyDiv{
-		grid-column: 1/4;
-		height: 50vh;
+		height: 30vh;
 	}
 	.banner{
-		grid-column: 1/4;
 		height: 10vh;
 	}
 	.introDiv{
-		grid-column: 1/4;
 		height: 40vh;
 	}
 	.introText{
@@ -340,7 +357,7 @@ color:white;
 	}
 	.contentLeftFull{
 		height: 60vh;
-		padding-top: 30vh;
+		padding-top: 25vh;
 		grid-column: 1/4;
 	}
 	.contentRightFull{
@@ -414,8 +431,15 @@ color:white;
 		opacity: 0;
 	}
 }
+/* End of the media queries */
+
+/* Then a query for height issues */
+@media only screen and (max-height: 850px) {
+	button > img {
+		margin-bottom: 2vh;
+	}
+}
 
 
 
-
-/* This is the end of the stylesheet of the EmileVituOnlineCV website*/
+/* This is the end of the stylesheet for the EmileVituOnlineCV website */
