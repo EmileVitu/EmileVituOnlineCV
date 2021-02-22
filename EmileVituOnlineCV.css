@@ -331,8 +331,8 @@ color:white;
 		padding-left: 5vh;
 		padding-right: 5vh;
 	}
-	button > img {
-		margin-bottom: 2vh;
+	button {
+		opacity: 0;
 	}
 }
 
